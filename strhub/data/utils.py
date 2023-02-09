@@ -16,7 +16,7 @@
 import re
 from abc import ABC, abstractmethod
 from itertools import groupby
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Union
 
 import torch
 from torch import Tensor
@@ -52,7 +52,7 @@ class BaseTokenizer(ABC):
     def __len__(self):
         return len(self._itos)
 
-    def _tok2ids(self, tokens: str) -> List[int]:
+    def _tok2ids(self, tokens: Union[str, List[str]]) -> List[int]:
         return [self._stoi[s] for s in tokens]
 
     def _ids2tok(self, token_ids: List[int], join: bool = True) -> str:
@@ -120,6 +120,15 @@ class Tokenizer(BaseTokenizer):
     def encode(
         self, labels: List[str], device: Optional[torch.device] = None
     ) -> Tensor:
+        """
+        Generate token indexes from batched strings
+
+        Args:
+            batch labels (List[List[str]]): batch strings
+
+        Returns:
+            batch tokens (List[List[int]]): batch indexes
+        """
         batch = [
             torch.as_tensor(
                 [self.bos_id] + self._tok2ids(y) + [self.eos_id],
