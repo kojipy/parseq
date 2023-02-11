@@ -101,7 +101,7 @@ def main(config: DictConfig):
         strategy=trainer_strategy,
         enable_model_summary=False,
         callbacks=[checkpoint, swa],
-        log_every_n_steps=5,
+        log_every_n_steps=100,
     )
     trainer.fit(model, datamodule=datamodule, ckpt_path=config.ckpt_path)
 
