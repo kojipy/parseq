@@ -28,7 +28,7 @@ from torch import Tensor
 from torch.optim import Optimizer
 from torch.optim.lr_scheduler import OneCycleLR
 
-from strhub.data.utils import BaseTokenizer, CharsetAdapter, Tokenizer
+from strhub.data.tokenizer import Tokenizer
 
 
 @dataclass
@@ -45,8 +45,7 @@ class BatchResult:
 class BaseSystem(pl.LightningModule, ABC):
     def __init__(
         self,
-        tokenizer: BaseTokenizer,
-        charset_test: str,
+        tokenizer: Tokenizer,
         batch_size: int,
         lr: float,
         warmup_pct: float,
@@ -54,7 +53,6 @@ class BaseSystem(pl.LightningModule, ABC):
     ) -> None:
         super().__init__()
         self.tokenizer = tokenizer
-        self.charset_adapter = CharsetAdapter(charset_test)
         self.batch_size = batch_size
         self.lr = lr
         self.warmup_pct = warmup_pct
@@ -139,7 +137,6 @@ class BaseSystem(pl.LightningModule, ABC):
         preds, probs = self.tokenizer.decode(probs)
         for pred, prob, gt in zip(preds, probs, labels):
             confidence += prob.prod().item()
-            pred = self.charset_adapter(pred)
             # Follow ICDAR 2019 definition of N.E.D.
             ned += edit_distance(pred, gt) / max(len(pred), len(gt))
             if pred == gt:
@@ -190,17 +187,14 @@ class BaseSystem(pl.LightningModule, ABC):
 class CrossEntropySystem(BaseSystem):
     def __init__(
         self,
-        charset_train: str,
-        charset_test: str,
+        target_signs_file: str,
         batch_size: int,
         lr: float,
         warmup_pct: float,
         weight_decay: float,
     ) -> None:
-        tokenizer = Tokenizer(charset_train)
-        super().__init__(
-            tokenizer, charset_test, batch_size, lr, warmup_pct, weight_decay
-        )
+        tokenizer = Tokenizer(target_signs_file)
+        super().__init__(tokenizer, batch_size, lr, warmup_pct, weight_decay)
         self.bos_id = tokenizer.bos_id
         self.eos_id = tokenizer.eos_id
         self.pad_id = tokenizer.pad_id

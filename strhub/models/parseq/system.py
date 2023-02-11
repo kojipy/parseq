@@ -35,8 +35,7 @@ from .modules import Decoder, DecoderLayer, Encoder, TokenEmbedding
 class PARSeq(CrossEntropySystem):
     def __init__(
         self,
-        charset_train: str,
-        charset_test: str,
+        target_signs_file: str,
         max_label_length: int,
         batch_size: int,
         lr: float,
@@ -59,9 +58,7 @@ class PARSeq(CrossEntropySystem):
         dropout: float,
         **kwargs: Any
     ) -> None:
-        super().__init__(
-            charset_train, charset_test, batch_size, lr, warmup_pct, weight_decay
-        )
+        super().__init__(target_signs_file, batch_size, lr, warmup_pct, weight_decay)
         self.save_hyperparameters()
 
         self.max_label_length = max_label_length
