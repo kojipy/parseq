@@ -4,7 +4,7 @@ import pytest
 import torchvision.transforms as T
 
 from strhub.data.dataset import LabelFile, SyntheticCuneiformLineImage
-from strhub.data.utils import Tokenizer
+from strhub.data.tokenizer import Tokenizer
 
 from .__init__ import CHARSET
 
