@@ -256,7 +256,7 @@ class AbgalDataModule(pl.LightningDataModule):
             pin_memory=True,
         )
 
-    def valid_dataloader(self):
+    def val_dataloader(self):
         # dataset = self.real_dataset
         dataset = self.valid_dataset
 
