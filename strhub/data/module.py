@@ -13,14 +13,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pathlib import PurePath
-from typing import Optional, Callable, Sequence, Tuple
+from pathlib import Path, PurePath
+from typing import Callable, Optional, Sequence, Tuple
 
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader
 from torchvision import transforms as T
 
-from .dataset import build_tree_dataset, LmdbDataset
+from .dataset import (
+    LmdbDataset,
+    SyntheticCuneiformLineImage,
+    SyntheticCuneiformValidationLineImage,
+    build_tree_dataset,
+)
 
 
 class SceneTextDataModule(pl.LightningDataModule):
@@ -160,3 +165,96 @@ class SceneTextDataModule(pl.LightningDataModule):
             )
             for k, v in datasets.items()
         }
+
+
+class AbgalDataModule(pl.LightningDataModule):
+    def __init__(
+        self,
+        synth_root_dir: str,
+        real_root_dir: str,
+        train_first_idx: int,
+        train_last_idx: int,
+        valid_first_idx: int,
+        valid_last_idx: int,
+        img_height: int,
+        img_width: int,
+        batch_size: int,
+        num_workers: int,
+        train_transform: T.Compose,
+        valid_transform: T.Compose,
+        real_data_transform: T.Compose,
+    ):
+        super().__init__()
+        self._synth_root_dir = synth_root_dir
+        self._synth_images_root_dir = str(Path(self._synth_root_dir) / "images")
+        self._synth_text_root_dir = str(Path(self._synth_root_dir) / "annotations")
+        self._real_root_dir = real_root_dir
+        self._real_images_root_dir = str(Path(self._real_root_dir) / "images")
+        self._real_text_root_dir = str(Path(self._real_root_dir) / "annotations")
+        self._train_first_idx = train_first_idx
+        self._train_last_idx = train_last_idx
+        self._valid_first_idx = valid_first_idx
+        self._valid_last_idx = valid_last_idx
+        self._img_height = img_height
+        self._img_width = img_width
+        self._batch_size = batch_size
+        self._num_workers = num_workers
+        self._train_transform = train_transform
+        self._valid_transform = valid_transform
+        self._real_data_transform = real_data_transform
+
+    @property
+    def train_dataset(self):
+        return SyntheticCuneiformLineImage(
+            images_root_dir=self._synth_images_root_dir,
+            texts_root_dir=self._synth_text_root_dir,
+            first_idx=self._train_first_idx,
+            last_idx=self._train_last_idx,
+            img_height=self._img_height,
+            img_width=self._img_width,
+            transform=self._train_transform,
+        )
+
+    @property
+    def valid_dataset(self):
+        return SyntheticCuneiformLineImage(
+            images_root_dir=self._synth_images_root_dir,
+            texts_root_dir=self._synth_text_root_dir,
+            first_idx=self._valid_first_idx,
+            last_idx=self._valid_last_idx,
+            img_height=self._img_height,
+            img_width=self._img_width,
+            transform=self._valid_transform,
+        )
+
+    @property
+    def real_dataset(self):
+        return SyntheticCuneiformValidationLineImage(
+            images_root_dir=self._real_images_root_dir,
+            transform=self._real_data_transform,
+            img_height=self._img_height,
+            img_width=self._img_width,
+        )
+
+    def train_dataloader(self):
+        return DataLoader(
+            self.train_dataset,
+            batch_size=self._batch_size,
+            num_workers=self._num_workers,
+            shuffle=True,
+            pin_memory=True,
+        )
+
+    def valid_dataloader(self):
+        # dataset = self.real_dataset
+        # since the length of real dataset is 9, batch_size is len(dataset)
+        # cause smaller than batch size value expected
+
+        dataset = self.valid_dataset
+        return DataLoader(
+            dataset=dataset,
+            batch_size=self._batch_size,
+            num_workers=self._num_workers,
+            shuffl=True,
+            pin_memory=True,
+        )

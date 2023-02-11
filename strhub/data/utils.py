@@ -44,8 +44,13 @@ class CharsetAdapter:
 
 class BaseTokenizer(ABC):
     def __init__(
-        self, charset: str, specials_first: tuple = (), specials_last: tuple = ()
+        self,
+        charset: Union[Tuple[str], str],
+        specials_first: tuple = (),
+        specials_last: tuple = (),
     ) -> None:
+        # ['TÚL', 'MI', 'PAB', ...]
+        charset: List[str] = [x[1:-1] for x in charset[1:-1].split(",")]
         self._itos = specials_first + tuple(charset) + specials_last
         self._stoi = {s: i for i, s in enumerate(self._itos)}
 
@@ -108,12 +113,14 @@ class Tokenizer(BaseTokenizer):
     BOS = "[B]"
     EOS = "[E]"
     PAD = "[P]"
+    UNK = "[UNK]"
+    SPC = " "  # token for space
 
-    def __init__(self, charset: str) -> None:
+    def __init__(self, charset: Tuple[str]) -> None:
         specials_first = (self.EOS,)
-        specials_last = (self.BOS, self.PAD)
+        specials_last = (self.UNK, self.SPC, self.BOS, self.PAD)
         super().__init__(charset, specials_first, specials_last)
-        self.eos_id, self.bos_id, self.pad_id = [
+        self.eos_id, self.unk_id, self.spc_id, self.bos_id, self.pad_id = [
             self._stoi[s] for s in specials_first + specials_last
         ]
 
@@ -138,6 +145,16 @@ class Tokenizer(BaseTokenizer):
             for y in labels
         ]
         return pad_sequence(batch, batch_first=True, padding_value=self.pad_id)
+
+    def _tok2ids(self, tokens: Union[str, List[str]]) -> List[int]:
+        ids = []
+        for token in tokens:
+            if token not in self._stoi.keys():
+                ids.append(self.unk_id)
+            else:
+                ids.append(self._stoi[token])
+
+        return ids
 
     def _filter(self, probs: Tensor, ids: Tensor) -> Tuple[Tensor, List[int]]:
         ids = ids.tolist()

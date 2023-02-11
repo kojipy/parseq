@@ -16,20 +16,20 @@
 import math
 from functools import partial
 from itertools import permutations
-from typing import Sequence, Any, Optional
+from typing import Any, Optional, Sequence
 
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch import Tensor
-
 from pytorch_lightning.utilities.types import STEP_OUTPUT
 from timm.models.helpers import named_apply
+from torch import Tensor
 
 from strhub.models.base import CrossEntropySystem
 from strhub.models.utils import init_weights
-from .modules import DecoderLayer, Decoder, Encoder, TokenEmbedding
+
+from .modules import Decoder, DecoderLayer, Encoder, TokenEmbedding
 
 
 class PARSeq(CrossEntropySystem):
@@ -319,6 +319,7 @@ class PARSeq(CrossEntropySystem):
 
     def training_step(self, batch, batch_idx) -> STEP_OUTPUT:
         images, labels = batch
+        labels = [label.split(",") for label in labels]
         tgt = self.tokenizer.encode(labels, self._device)
 
         # Encode the source sequence (i.e. the image codes)

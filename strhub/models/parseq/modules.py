@@ -17,11 +17,11 @@ import math
 from typing import Optional
 
 import torch
-from torch import nn as nn, Tensor
+from timm.models.vision_transformer import PatchEmbed, VisionTransformer
+from torch import Tensor
+from torch import nn as nn
 from torch.nn import functional as F
 from torch.nn.modules import transformer
-
-from timm.models.vision_transformer import VisionTransformer, PatchEmbed
 
 
 class DecoderLayer(nn.Module):
@@ -166,7 +166,7 @@ class Encoder(VisionTransformer):
         self,
         img_size=224,
         patch_size=16,
-        in_chans=3,
+        in_chans=1,
         embed_dim=768,
         depth=12,
         num_heads=12,

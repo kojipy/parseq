@@ -151,3 +151,7 @@ cython_debug/
 
 .vscode
 config/*
+
+data/*
+!data/*.py
+!data/*.csv

@@ -1,43 +1,41 @@
 defaults:
   - _self_
   - model: parseq
-  - charset: 94_full
-  - dataset: real
+  # - charset: 94_full
 
 model:
   _convert_: all
-  img_size: [ 32, 128 ]  # [ height, width ]
-  max_label_length: 25
+  img_size: [ 32, 512 ]  # [ height, width ]
+  max_label_length: 50
   # The ordering in charset_train matters. It determines the token IDs assigned to each character.
-  charset_train: ???
+  charset_train: ("TÚL","MI","PAB","AB","NI","GIŠ","ZÍ","TI","GEŠTIN","IM","GAG","GAN","SU","UR","ANŠE","KIN","MAR","EŠ","DIŠ","PA","LI","MEŠ","IŠ","URUDU","UG","AD","LUGAL","SİLA","BU","LIŠ","KAR","KUR","GAM","SÍG","UN","GAL","KASKAL","NU","KAL","MAḪ","DAG","NA@4","LAGAB","UZ","TAB","KAB","TAR","UZU","MÁŠ","ŠU","ALAM","NÍG","LUM","EGIR","Ù","ŠEŠ","TÚG","TA","IB","ZA","BAD","KID","KA×U","ZAG","SISKUR","AN","ḪA","GIG","ŠÚ","ŠE","GAD","AG","DIN","ŠID","AZU","ŠA","IA","ZU","LAM","ÚR","EL","ŠAḪ","BA","IŠTAR","GUL","Ú","EME","AḪ","EŠ@5","TAG","RU","LU","GIM","ENGUR","DU","DUḪ","GÚ","DUG","NA","U","AM","IR","AR","BAL","BI","ḪI","UD","KAM","ERIM","URU","MUNUS","ḪU","UB","IN","KA","RA","MU","SIG","ME","KÁ","A","KU","DI","KUG","NAM","ITI","DAḪ","ŠUBUR","MUŠ","KI","LÚ","UM","TE","TU","ZI","EN","TUM","KU@7","UL","I","DUB","ŠÀ","DA","IMIN","BAR","MA","GA","É","SAR","TUR","AL","AZ","AŠ","ARAD","ILIMMU","TUK","LIMMU","GI","SIG@5","LA","IGI","MIN","NE","DIM","ḪUL","PI","IÁ","GÌR","NIN","SILA@4","ḪAL","DIR","SAG","ÁŠ","IL","UŠ","ḪAR","DAM","GÁN","KIŠ","IG","E","Á","GAŠAN","GU@4","RI","LÀL","AMA")
   # For charset_test, ordering doesn't matter.
-  charset_test: "0123456789abcdefghijklmnopqrstuvwxyz"
-  batch_size: 384
+  charset_test:  ("TÚL","MI","PAB","AB","NI","GIŠ","ZÍ","TI","GEŠTIN","IM","GAG","GAN","SU","UR","ANŠE","KIN","MAR","EŠ","DIŠ","PA","LI","MEŠ","IŠ","URUDU","UG","AD","LUGAL","SİLA","BU","LIŠ","KAR","KUR","GAM","SÍG","UN","GAL","KASKAL","NU","KAL","MAḪ","DAG","NA@4","LAGAB","UZ","TAB","KAB","TAR","UZU","MÁŠ","ŠU","ALAM","NÍG","LUM","EGIR","Ù","ŠEŠ","TÚG","TA","IB","ZA","BAD","KID","KA×U","ZAG","SISKUR","AN","ḪA","GIG","ŠÚ","ŠE","GAD","AG","DIN","ŠID","AZU","ŠA","IA","ZU","LAM","ÚR","EL","ŠAḪ","BA","IŠTAR","GUL","Ú","EME","AḪ","EŠ@5","TAG","RU","LU","GIM","ENGUR","DU","DUḪ","GÚ","DUG","NA","U","AM","IR","AR","BAL","BI","ḪI","UD","KAM","ERIM","URU","MUNUS","ḪU","UB","IN","KA","RA","MU","SIG","ME","KÁ","A","KU","DI","KUG","NAM","ITI","DAḪ","ŠUBUR","MUŠ","KI","LÚ","UM","TE","TU","ZI","EN","TUM","KU@7","UL","I","DUB","ŠÀ","DA","IMIN","BAR","MA","GA","É","SAR","TUR","AL","AZ","AŠ","ARAD","ILIMMU","TUK","LIMMU","GI","SIG@5","LA","IGI","MIN","NE","DIM","ḪUL","PI","IÁ","GÌR","NIN","SILA@4","ḪAL","DIR","SAG","ÁŠ","IL","UŠ","ḪAR","DAM","GÁN","KIŠ","IG","E","Á","GAŠAN","GU@4","RI","LÀL","AMA")
+  batch_size: 4
   weight_decay: 0.0
   warmup_pct: 0.075  # equivalent to 1.5 epochs of warm up
 
 data:
-  _target_: strhub.data.module.SceneTextDataModule
-  root_dir: data
-  train_dir: ???
-  batch_size: ${model.batch_size}
-  img_size: ${model.img_size}
-  charset_train: ${model.charset_train}
-  charset_test: ${model.charset_test}
-  max_label_length: ${model.max_label_length}
-  remove_whitespace: true
-  normalize_unicode: true
-  augment: true
-  num_workers: 2
+  _target_: strhub.data.module.AbgalDataModule
+  synth_root_dir: data
+  real_root_dir: data
+  train_first_idx: 0
+  train_last_idx: 100
+  valid_first_idx: 101
+  valid_last_idx: 150
+  img_height: 32
+  img_width: 512
+  batch_size: 4
+  num_workers: 8
 
 trainer:
   _target_: pytorch_lightning.Trainer
   _convert_: all
-  val_check_interval: 1000
+  val_check_interval: 5
   #max_steps: 169680  # 20 epochs x 8484 steps (for batch size = 384, real data)
   max_epochs: 20
   gradient_clip_val: 20
-  gpus: 2
+  # gpus: 2
 
 ckpt_path: null
 pretrained: null
@@ -49,3 +47,6 @@ hydra:
   sweep:
     dir: multirun/${model.name}/${now:%Y-%m-%d}_${now:%H-%M-%S}
     subdir: ${hydra.job.override_dirname}
+
+
+

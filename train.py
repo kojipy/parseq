@@ -17,6 +17,7 @@
 from pathlib import Path
 
 import hydra
+import torchvision.transforms as T
 from hydra.core.hydra_config import HydraConfig
 from omegaconf import DictConfig, open_dict
 from pytorch_lightning import Trainer
@@ -25,9 +26,21 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.strategies import DDPStrategy
 from pytorch_lightning.utilities.model_summary import summarize
 
-from strhub.data.module import SceneTextDataModule
+from strhub.data.module import AbgalDataModule
 from strhub.models.base import BaseSystem
 from strhub.models.utils import get_pretrained_weights
+
+transform = T.Compose(
+    [
+        T.RandomApply(
+            transforms=[T.GaussianBlur(kernel_size=(5, 9), sigma=(0.1, 5))], p=0.3
+        ),
+        T.RandomRotation(degrees=(0, 3)),
+        T.Resize(32),
+        T.Grayscale(),
+        T.ToTensor(),
+    ]
+)
 
 
 @hydra.main(config_path="configs", config_name="main", version_base="1.2")
@@ -35,7 +48,7 @@ def main(config: DictConfig):
     trainer_strategy = None
     with open_dict(config):
         # Resolve absolute path to data.root_dir
-        config.data.root_dir = hydra.utils.to_absolute_path(config.data.root_dir)
+        # config.data.root_dir = hydra.utils.to_absolute_path(config.data.root_dir)
         # Special handling for GPU-affected config
         gpus = config.trainer.get("gpus", 0)
         if gpus:
@@ -67,7 +80,12 @@ def main(config: DictConfig):
         summarize(model, max_depth=1 if model.hparams.name.startswith("parseq") else 2)
     )
 
-    datamodule: SceneTextDataModule = hydra.utils.instantiate(config.data)
+    datamodule: AbgalDataModule = hydra.utils.instantiate(
+        config.data,
+        train_transform=transform,
+        valid_transform=transform,
+        real_data_transform=transform,
+    )
 
     checkpoint = ModelCheckpoint(
         monitor="val_accuracy",
@@ -88,6 +106,7 @@ def main(config: DictConfig):
         strategy=trainer_strategy,
         enable_model_summary=False,
         callbacks=[checkpoint, swa],
+        log_every_n_steps=5,
     )
     trainer.fit(model, datamodule=datamodule, ckpt_path=config.ckpt_path)
 
