@@ -80,12 +80,7 @@ def main(config: DictConfig):
         summarize(model, max_depth=1 if model.hparams.name.startswith("parseq") else 2)
     )
 
-    datamodule: AbgalDataModule = hydra.utils.instantiate(
-        config.data,
-        train_transform=transform,
-        valid_transform=transform,
-        real_data_transform=transform,
-    )
+    datamodule: AbgalDataModule = hydra.utils.instantiate(config.data)
 
     checkpoint = ModelCheckpoint(
         monitor="val_accuracy",

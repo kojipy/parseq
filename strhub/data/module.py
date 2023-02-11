@@ -180,9 +180,6 @@ class AbgalDataModule(pl.LightningDataModule):
         img_width: int,
         batch_size: int,
         num_workers: int,
-        train_transform: T.Compose,
-        valid_transform: T.Compose,
-        real_data_transform: T.Compose,
     ):
         super().__init__()
         self._synth_root_dir = synth_root_dir
@@ -199,9 +196,23 @@ class AbgalDataModule(pl.LightningDataModule):
         self._img_width = img_width
         self._batch_size = batch_size
         self._num_workers = num_workers
-        self._train_transform = train_transform
-        self._valid_transform = valid_transform
-        self._real_data_transform = real_data_transform
+
+    @staticmethod
+    def get_transform(augment: bool):
+        augments = []
+        if augment:
+            augments.extend(
+                [
+                    T.RandomApply(
+                        transforms=[T.GaussianBlur(kernel_size=(5, 9), sigma=(0.1, 5))],
+                        p=0.3,
+                    ),
+                    T.RandomRotation(degrees=(0, 3)),
+                ]
+            )
+        augments.extend([T.Resize(32), T.Grayscale(), T.ToTensor()])
+
+        return T.Compose(augments)
 
     @property
     def train_dataset(self):
@@ -212,7 +223,7 @@ class AbgalDataModule(pl.LightningDataModule):
             last_idx=self._train_last_idx,
             img_height=self._img_height,
             img_width=self._img_width,
-            transform=self._train_transform,
+            transform=self.get_transform(augment=True),
         )
 
     @property
@@ -224,14 +235,14 @@ class AbgalDataModule(pl.LightningDataModule):
             last_idx=self._valid_last_idx,
             img_height=self._img_height,
             img_width=self._img_width,
-            transform=self._valid_transform,
+            transform=self.get_transform(augment=False),
         )
 
     @property
     def real_dataset(self):
         return SyntheticCuneiformValidationLineImage(
             images_root_dir=self._real_images_root_dir,
-            transform=self._real_data_transform,
+            transform=self.get_transform(augment=False),
             img_height=self._img_height,
             img_width=self._img_width,
         )
@@ -247,10 +258,8 @@ class AbgalDataModule(pl.LightningDataModule):
 
     def valid_dataloader(self):
         # dataset = self.real_dataset
-        # since the length of real dataset is 9, batch_size is len(dataset)
-        # cause smaller than batch size value expected
-
         dataset = self.valid_dataset
+
         return DataLoader(
             dataset=dataset,
             batch_size=self._batch_size,
