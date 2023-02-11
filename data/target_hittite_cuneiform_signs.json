@@ -1,0 +1,4002 @@
+{
+  "A": {
+    "meszl_number": "839",
+    "readings": [
+      {
+        "count": 8724,
+        "reading": "a",
+        "type": "Hittite"
+      },
+      {
+        "count": 2108,
+        "reading": "A",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 1254,
+        "reading": "A",
+        "type": "Determination"
+      },
+      {
+        "count": 452,
+        "reading": "A",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 96,
+        "reading": "A",
+        "type": "Hittite"
+      },
+      {
+        "count": 7,
+        "reading": "DUR@5",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "A.ENGUR": {
+    "meszl_number": "839.756",
+    "readings": [
+      {
+        "count": 192,
+        "reading": "ÍD",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "I@7",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "Á": {
+    "meszl_number": "560",
+    "readings": [
+      {
+        "count": 2048,
+        "reading": "it",
+        "type": "Hittite"
+      },
+      {
+        "count": 536,
+        "reading": "et",
+        "type": "Hittite"
+      },
+      {
+        "count": 89,
+        "reading": "id",
+        "type": "Hittite"
+      },
+      {
+        "count": 56,
+        "reading": "IT",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 47,
+        "reading": "ed",
+        "type": "Hittite"
+      },
+      {
+        "count": 26,
+        "reading": "TI@8",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AB": {
+    "meszl_number": "223",
+    "readings": [
+      {
+        "count": 633,
+        "reading": "ap",
+        "type": "Hittite"
+      },
+      {
+        "count": 41,
+        "reading": "AB",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 27,
+        "reading": "ab",
+        "type": "Hittite"
+      },
+      {
+        "count": 5,
+        "reading": "AP",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "AD": {
+    "meszl_number": "258",
+    "readings": [
+      {
+        "count": 3264,
+        "reading": "at",
+        "type": "Hittite"
+      },
+      {
+        "count": 131,
+        "reading": "ad",
+        "type": "Hittite"
+      },
+      {
+        "count": 66,
+        "reading": "AD",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 42,
+        "reading": "AT",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "AG": {
+    "meszl_number": "127",
+    "readings": [
+      {
+        "count": 610,
+        "reading": "ak",
+        "type": "Hittite"
+      },
+      {
+        "count": 63,
+        "reading": "AG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 35,
+        "reading": "ag",
+        "type": "Hittite"
+      },
+      {
+        "count": 32,
+        "reading": "AK",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 4,
+        "reading": "aq",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "AL": {
+    "meszl_number": "474",
+    "readings": [
+      {
+        "count": 623,
+        "reading": "al",
+        "type": "Hittite"
+      },
+      {
+        "count": 12,
+        "reading": "AL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ALAM": {
+    "meszl_number": "573",
+    "readings": [
+      {
+        "count": 100,
+        "reading": "ALAM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AM": {
+    "meszl_number": "309",
+    "readings": [
+      {
+        "count": 367,
+        "reading": "am",
+        "type": "Hittite"
+      },
+      {
+        "count": 17,
+        "reading": "AM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AMA": {
+    "meszl_number": "392",
+    "readings": [
+      {
+        "count": 70,
+        "reading": "AMA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AN": {
+    "meszl_number": "10",
+    "readings": [
+      {
+        "count": 15412,
+        "reading": "an",
+        "type": "Hittite"
+      },
+      {
+        "count": 1930,
+        "reading": "DINGIR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 114,
+        "reading": "AN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 82,
+        "reading": "an",
+        "type": "AOLuwian"
+      },
+      {
+        "count": 82,
+        "reading": "d",
+        "type": "Determination"
+      },
+      {
+        "count": 1557,
+        "reading": "d",
+        "type": "Determination"
+      }
+    ]
+  },
+  "ANŠE": {
+    "meszl_number": "353",
+    "readings": [
+      {
+        "count": 85,
+        "reading": "ANŠE",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AR": {
+    "meszl_number": "726",
+    "readings": [
+      {
+        "count": 2123,
+        "reading": "ar",
+        "type": "Hittite"
+      },
+      {
+        "count": 4,
+        "reading": "AR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ARAD": {
+    "meszl_number": "18",
+    "readings": [
+      {
+        "count": 78,
+        "reading": "ARAD",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 40,
+        "reading": "ÌR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 27,
+        "reading": "NÍTA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AZ": {
+    "meszl_number": "297",
+    "readings": [
+      {
+        "count": 1220,
+        "reading": "az",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "AZU": {
+    "meszl_number": "324",
+    "readings": [
+      {
+        "count": 103,
+        "reading": "AZU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AŠ": {
+    "meszl_number": "1",
+    "readings": [
+      {
+        "count": 9198,
+        "reading": "aš",
+        "type": "Hittite"
+      },
+      {
+        "count": 63,
+        "reading": "AŠ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "AŠ.AŠ": {
+    "meszl_number": "1.1",
+    "readings": [
+      {
+        "count": 33,
+        "reading": "DIDLI",
+        "type": "Determination"
+      }
+    ]
+  },
+  "AḪ": {
+    "meszl_number": "636",
+    "readings": [
+      {
+        "count": 1828,
+        "reading": "aḫ",
+        "type": "Hittite"
+      },
+      {
+        "count": 257,
+        "reading": "uḫ",
+        "type": "Hittite"
+      },
+      {
+        "count": 119,
+        "reading": "eḫ",
+        "type": "Hittite"
+      },
+      {
+        "count": 67,
+        "reading": "iḫ",
+        "type": "Hittite"
+      },
+      {
+        "count": 10,
+        "reading": "AḪ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 4,
+        "reading": "UḪ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "A.AN": {
+    "meszl_number": "839.10",
+    "readings": [
+      {
+        "count": 10,
+        "reading": "ÀM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ÁŠ": {
+    "meszl_number": "548",
+    "readings": [
+      {
+        "count": 36,
+        "reading": "ZÍZ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 15,
+        "reading": "tàš",
+        "type": "Hittite"
+      },
+      {
+        "count": 6,
+        "reading": "ÁŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "BA": {
+    "meszl_number": "14",
+    "readings": [
+      {
+        "count": 165,
+        "reading": "BA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 75,
+        "reading": "ba",
+        "type": "Hittite"
+      },
+      {
+        "count": 2,
+        "reading": "pá",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "BAD": {
+    "meszl_number": "113",
+    "readings": [
+      {
+        "count": 449,
+        "reading": "pát",
+        "type": "Hittite"
+      },
+      {
+        "count": 119,
+        "reading": "BE",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 85,
+        "reading": "pád",
+        "type": "Hittite"
+      },
+      {
+        "count": 60,
+        "reading": "pít",
+        "type": "Hittite"
+      },
+      {
+        "count": 40,
+        "reading": "ÚŠ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 30,
+        "reading": "píd",
+        "type": "Hittite"
+      },
+      {
+        "count": 20,
+        "reading": "BAT",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 7,
+        "reading": "MIT",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 6,
+        "reading": "TIL",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 6,
+        "reading": "bad",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "BAL": {
+    "meszl_number": "5",
+    "readings": [
+      {
+        "count": 71,
+        "reading": "BAL",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 61,
+        "reading": "PAL",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 49,
+        "reading": "pal",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "URU.URUDU": {
+    "meszl_number": "71.239",
+    "readings": [
+      {
+        "count": 175,
+        "reading": "BANŠUR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "URUDU": {
+    "meszl_number": "239",
+    "readings": [
+      {
+        "count": 175,
+        "reading": "URUDU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "URUDU.DA": {
+    "meszl_number": "239.561",
+    "readings": [
+      {
+        "count": 10,
+        "reading": "ÙMMEDA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "BAR": {
+    "meszl_number": "121",
+    "readings": [
+      {
+        "count": 656,
+        "reading": "pár",
+        "type": "Hittite"
+      },
+      {
+        "count": 59,
+        "reading": "BAR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 38,
+        "reading": "MAŠ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "maš",
+        "type": "Hittite"
+      },
+      {
+        "count": 5,
+        "reading": "BÁN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "BI": {
+    "meszl_number": "358",
+    "readings": [
+      {
+        "count": 1507,
+        "reading": "pí",
+        "type": "Hittite"
+      },
+      {
+        "count": 1362,
+        "reading": "pé",
+        "type": "Hittite"
+      },
+      {
+        "count": 175,
+        "reading": "BI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 147,
+        "reading": "bi",
+        "type": "Hittite"
+      },
+      {
+        "count": 111,
+        "reading": "KAŠ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 12,
+        "reading": "PÍ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 11,
+        "reading": "kaš",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "BU": {
+    "meszl_number": "580",
+    "readings": [
+      {
+        "count": 632,
+        "reading": "pu",
+        "type": "Hittite"
+      },
+      {
+        "count": 85,
+        "reading": "BU",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 58,
+        "reading": "GÍD",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 18,
+        "reading": "PU",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "KI.NE": {
+    "meszl_number": "737.313",
+    "readings": [
+      {
+        "count": 57,
+        "reading": "GUNNI",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DA": {
+    "meszl_number": "561",
+    "readings": [
+      {
+        "count": 5666,
+        "reading": "da",
+        "type": "Hittite"
+      },
+      {
+        "count": 109,
+        "reading": "DA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 5,
+        "reading": "TÁ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DAG": {
+    "meszl_number": "438",
+    "readings": [
+      {
+        "count": 377,
+        "reading": "ták",
+        "type": "Hittite"
+      },
+      {
+        "count": 17,
+        "reading": "tág",
+        "type": "Hittite"
+      },
+      {
+        "count": 12,
+        "reading": "BÀR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "DAG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DAM": {
+    "meszl_number": "889",
+    "readings": [
+      {
+        "count": 96,
+        "reading": "dam",
+        "type": "Hittite"
+      },
+      {
+        "count": 91,
+        "reading": "DAM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 9,
+        "reading": "TÁM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DI": {
+    "meszl_number": "736",
+    "readings": [
+      {
+        "count": 193,
+        "reading": "di",
+        "type": "Hittite"
+      },
+      {
+        "count": 53,
+        "reading": "DI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 23,
+        "reading": "SÁ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 8,
+        "reading": "TI@4",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "DIM": {
+    "meszl_number": "167",
+    "readings": [
+      {
+        "count": 145,
+        "reading": "TIM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 64,
+        "reading": "tim",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "DIN": {
+    "meszl_number": "119",
+    "readings": [
+      {
+        "count": 230,
+        "reading": "tén",
+        "type": "Hittite"
+      },
+      {
+        "count": 10,
+        "reading": "DIN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "din",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "DIR": {
+    "meszl_number": "207",
+    "readings": [
+      {
+        "count": 90,
+        "reading": "SA@5",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DIŠ": {
+    "meszl_number": "748",
+    "readings": [
+      {
+        "count": 1283,
+        "reading": "1",
+        "type": "Numeral"
+      },
+      {
+        "count": 478,
+        "reading": "m",
+        "type": "Determination"
+      }
+    ]
+  },
+  "DU": {
+    "meszl_number": "350",
+    "readings": [
+      {
+        "count": 1471,
+        "reading": "du",
+        "type": "Hittite"
+      },
+      {
+        "count": 168,
+        "reading": "DU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 18,
+        "reading": "TÙ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 16,
+        "reading": "GUB",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 1,
+        "reading": "GIN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DUḪ": {
+    "meszl_number": "298",
+    "readings": [
+      {
+        "count": 29,
+        "reading": "GABA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 14,
+        "reading": "DUḪ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 8,
+        "reading": "DU@8",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "GAB",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DUB": {
+    "meszl_number": "242",
+    "readings": [
+      {
+        "count": 71,
+        "reading": "DUB",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 43,
+        "reading": "tup",
+        "type": "Hittite"
+      },
+      {
+        "count": 16,
+        "reading": "ṬUP",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 12,
+        "reading": "KIŠIB",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DUG": {
+    "meszl_number": "499",
+    "readings": [
+      {
+        "count": 386,
+        "reading": "DUG",
+        "type": "Determination"
+      },
+      {
+        "count": 88,
+        "reading": "DUG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "E": {
+    "meszl_number": "498",
+    "readings": [
+      {
+        "count": 4659,
+        "reading": "e",
+        "type": "Hittite"
+      },
+      {
+        "count": 105,
+        "reading": "E",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 77,
+        "reading": "E",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "EGIR": {
+    "meszl_number": "356",
+    "readings": [
+      {
+        "count": 1054,
+        "reading": "EGIR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "EL": {
+    "meszl_number": "899",
+    "readings": [
+      {
+        "count": 464,
+        "reading": "el",
+        "type": "Hittite"
+      },
+      {
+        "count": 57,
+        "reading": "EL",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "EME": {
+    "meszl_number": "61",
+    "readings": [
+      {
+        "count": 159,
+        "reading": "EME",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "EN": {
+    "meszl_number": "164",
+    "readings": [
+      {
+        "count": 494,
+        "reading": "EN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 414,
+        "reading": "en",
+        "type": "Hittite"
+      },
+      {
+        "count": 77,
+        "reading": "EN",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "EN.ME.LI": {
+    "meszl_number": "164.753.85",
+    "readings": [
+      {
+        "count": 10,
+        "reading": "ENSI",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ERIM": {
+    "meszl_number": "612",
+    "readings": [
+      {
+        "count": 92,
+        "reading": "ÉRIN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 37,
+        "reading": "ERÍN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "EŠ": {
+    "meszl_number": "711",
+    "readings": [
+      {
+        "count": 2391,
+        "reading": "eš",
+        "type": "Hittite"
+      },
+      {
+        "count": 10,
+        "reading": "ÌŠ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 19,
+        "reading": "30",
+        "type": "Numeral"
+      },
+      {
+        "count": 11,
+        "reading": "EŠ",
+        "type": "Determination"
+      }
+    ]
+  },
+  "EŠ@5": {
+    "meszl_number": "834",
+    "readings": [
+      {
+        "count": 269,
+        "reading": "3",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "IMIN": {
+    "meszl_number": "863",
+    "readings": [
+      {
+        "count": 145,
+        "reading": "7",
+        "type": "Numeral"
+      },
+      {
+        "count": 12,
+        "reading": "IMIN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GA": {
+    "meszl_number": "491",
+    "readings": [
+      {
+        "count": 993,
+        "reading": "ga",
+        "type": "Hittite"
+      },
+      {
+        "count": 201,
+        "reading": "GA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 9,
+        "reading": "KÀ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GAD": {
+    "meszl_number": "157",
+    "readings": [
+      {
+        "count": 624,
+        "reading": "kat",
+        "type": "Hittite"
+      },
+      {
+        "count": 34,
+        "reading": "GADA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 11,
+        "reading": "kit@9",
+        "type": "Hittite"
+      },
+      {
+        "count": 8,
+        "reading": "kad",
+        "type": "Hittite"
+      },
+      {
+        "count": 6,
+        "reading": "GAD",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GAG": {
+    "meszl_number": "379",
+    "readings": [
+      {
+        "count": 139,
+        "reading": "DÙ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 77,
+        "reading": "GAG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 5,
+        "reading": "KAK",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GAL": {
+    "meszl_number": "553",
+    "readings": [
+      {
+        "count": 545,
+        "reading": "GAL",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 25,
+        "reading": "gal",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "GAM": {
+    "meszl_number": "576",
+    "readings": [
+      {
+        "count": 111,
+        "reading": "GAM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GAN": {
+    "meszl_number": "253",
+    "readings": [
+      {
+        "count": 163,
+        "reading": "ḫé",
+        "type": "Hittite"
+      },
+      {
+        "count": 3,
+        "reading": "ḫí",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "GÁN": {
+    "meszl_number": "174",
+    "readings": [
+      {
+        "count": 3237,
+        "reading": "kán",
+        "type": "Hittite"
+      },
+      {
+        "count": 6,
+        "reading": "GÁN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 4,
+        "reading": "IKU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GAŠAN": {
+    "meszl_number": "562",
+    "readings": [
+      {
+        "count": 85,
+        "reading": "GAŠAN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GEŠTIN": {
+    "meszl_number": "212",
+    "readings": [
+      {
+        "count": 293,
+        "reading": "GEŠTIN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 42,
+        "reading": "wi@5",
+        "type": "Hittite"
+      },
+      {
+        "count": 5,
+        "reading": "ui@5",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "GI": {
+    "meszl_number": "141",
+    "readings": [
+      {
+        "count": 211,
+        "reading": "GI",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 78,
+        "reading": "gi",
+        "type": "Hittite"
+      },
+      {
+        "count": 62,
+        "reading": "ge",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "GIG": {
+    "meszl_number": "705",
+    "readings": [
+      {
+        "count": 97,
+        "reading": "GIG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GIM": {
+    "meszl_number": "686",
+    "readings": [
+      {
+        "count": 260,
+        "reading": "GIM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GIŠ": {
+    "meszl_number": "469",
+    "readings": [
+      {
+        "count": 1442,
+        "reading": "GIŠ",
+        "type": "Determination"
+      },
+      {
+        "count": 810,
+        "reading": "ez",
+        "type": "Hittite"
+      },
+      {
+        "count": 653,
+        "reading": "iz",
+        "type": "Hittite"
+      },
+      {
+        "count": 167,
+        "reading": "GIŠ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 19,
+        "reading": "IṢ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 4,
+        "reading": "iṣ",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "GÚ": {
+    "meszl_number": "176",
+    "readings": [
+      {
+        "count": 60,
+        "reading": "GÚ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GU@4": {
+    "meszl_number": "472",
+    "readings": [
+      {
+        "count": 265,
+        "reading": "GU@4",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 10,
+        "reading": "GUD",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GUL": {
+    "meszl_number": "682",
+    "readings": [
+      {
+        "count": 103,
+        "reading": "gul",
+        "type": "Hittite"
+      },
+      {
+        "count": 40,
+        "reading": "GUL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ZA.GUL": {
+    "meszl_number": "851.701",
+    "readings": [
+      {
+        "count": 15,
+        "reading": "GUG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "GÌR": {
+    "meszl_number": "701",
+    "readings": [
+      {
+        "count": 111,
+        "reading": "GÌR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "I": {
+    "meszl_number": "252",
+    "readings": [
+      {
+        "count": 4979,
+        "reading": "i",
+        "type": "Hittite"
+      },
+      {
+        "count": 396,
+        "reading": "I",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "PI.E": {
+    "meszl_number": "598.498",
+    "readings": [
+      {
+        "count": 20,
+        "reading": "we@e",
+        "type": "Hurrian"
+      }
+    ]
+  },
+  "IA": {
+    "meszl_number": "260",
+    "readings": [
+      {
+        "count": 2773,
+        "reading": "ia",
+        "type": "Hittite"
+      },
+      {
+        "count": 122,
+        "reading": "ia",
+        "type": "Hurrian"
+      },
+      {
+        "count": 2130,
+        "reading": "ya",
+        "type": "Hittite"
+      },
+      {
+        "count": 454,
+        "reading": "YA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 32,
+        "reading": "IA",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "IB": {
+    "meszl_number": "807",
+    "readings": [
+      {
+        "count": 213,
+        "reading": "ep",
+        "type": "Hittite"
+      },
+      {
+        "count": 106,
+        "reading": "ip",
+        "type": "Hittite"
+      },
+      {
+        "count": 22,
+        "reading": "IB",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 4,
+        "reading": "ib",
+        "type": "Hittite"
+      },
+      {
+        "count": 4,
+        "reading": "eb",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "IG": {
+    "meszl_number": "136",
+    "readings": [
+      {
+        "count": 658,
+        "reading": "ik",
+        "type": "Hittite"
+      },
+      {
+        "count": 130,
+        "reading": "ek",
+        "type": "Hittite"
+      },
+      {
+        "count": 69,
+        "reading": "GÁL",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 42,
+        "reading": "iq",
+        "type": "Hittite"
+      },
+      {
+        "count": 23,
+        "reading": "ig",
+        "type": "Hittite"
+      },
+      {
+        "count": 17,
+        "reading": "IQ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 17,
+        "reading": "eg",
+        "type": "Hittite"
+      },
+      {
+        "count": 16,
+        "reading": "IG",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 5,
+        "reading": "IK",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "IGI": {
+    "meszl_number": "724",
+    "readings": [
+      {
+        "count": 2934,
+        "reading": "ši",
+        "type": "Hittite"
+      },
+      {
+        "count": 578,
+        "reading": "LIM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 226,
+        "reading": "ŠI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 155,
+        "reading": "IGI",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "IGI.DUB": {
+    "meszl_number": "868.242",
+    "readings": [
+      {
+        "count": 6,
+        "reading": "GISKIM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 1,
+        "reading": "AGRIG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "IGI.GAG": {
+    "meszl_number": "868.379",
+    "readings": [
+      {
+        "count": 19,
+        "reading": "ŠUKUR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ILIMMU": {
+    "meszl_number": "868",
+    "readings": [
+      {
+        "count": 106,
+        "reading": "9",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "IM": {
+    "meszl_number": "641",
+    "readings": [
+      {
+        "count": 301,
+        "reading": "IM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 226,
+        "reading": "im",
+        "type": "Hittite"
+      },
+      {
+        "count": 63,
+        "reading": "NÍ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 41,
+        "reading": "EM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 16,
+        "reading": "IŠKUR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 9,
+        "reading": "em",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "IM.ME": {
+    "meszl_number": "641.753",
+    "readings": [
+      {
+        "count": 7,
+        "reading": "GUDU@12",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "IN": {
+    "meszl_number": "261",
+    "readings": [
+      {
+        "count": 1242,
+        "reading": "in",
+        "type": "Hittite"
+      },
+      {
+        "count": 49,
+        "reading": "IN",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "IR": {
+    "meszl_number": "437",
+    "readings": [
+      {
+        "count": 213,
+        "reading": "ir",
+        "type": "Hittite"
+      },
+      {
+        "count": 891,
+        "reading": "er",
+        "type": "Hittite"
+      },
+      {
+        "count": 50,
+        "reading": "ER",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 8,
+        "reading": "IR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ITI": {
+    "meszl_number": "20",
+    "readings": [
+      {
+        "count": 74,
+        "reading": "ITU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "IŠ": {
+    "meszl_number": "357",
+    "readings": [
+      {
+        "count": 4715,
+        "reading": "iš",
+        "type": "Hittite"
+      },
+      {
+        "count": 584,
+        "reading": "IŠ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 16,
+        "reading": "eš@15",
+        "type": "Hittite"
+      },
+      {
+        "count": 8,
+        "reading": "SAḪAR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "IŠTAR": {
+    "meszl_number": "670",
+    "readings": [
+      {
+        "count": 134,
+        "reading": "IŠTAR",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "KA": {
+    "meszl_number": "24",
+    "readings": [
+      {
+        "count": 790,
+        "reading": "ka",
+        "type": "Hittite"
+      },
+      {
+        "count": 277,
+        "reading": "KA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 99,
+        "reading": "INIM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "ZÚ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 4,
+        "reading": "KIR@4",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 2,
+        "reading": "DU@11",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 1,
+        "reading": "QÀ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "KAB": {
+    "meszl_number": "148",
+    "readings": [
+      {
+        "count": 82,
+        "reading": "kap",
+        "type": "Hittite"
+      },
+      {
+        "count": 60,
+        "reading": "GÙB",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KA×U": {
+    "meszl_number": "56",
+    "readings": [
+      {
+        "count": 93,
+        "reading": "KA×U",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "IÁ": {
+    "meszl_number": "861",
+    "readings": [
+      {
+        "count": 66,
+        "reading": "5",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "IL": {
+    "meszl_number": "348",
+    "readings": [
+      {
+        "count": 64,
+        "reading": "il",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "KAL": {
+    "meszl_number": "496",
+    "readings": [
+      {
+        "count": 123,
+        "reading": "LAMMA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 84,
+        "reading": "kal",
+        "type": "Hittite"
+      },
+      {
+        "count": 17,
+        "reading": "GURUŠ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 10,
+        "reading": "dan",
+        "type": "Hittite"
+      },
+      {
+        "count": 5,
+        "reading": "KALAG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "KAL",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "KALA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KI.KAL.BAD": {
+    "meszl_number": "737.496.113",
+    "readings": [
+      {
+        "count": 40,
+        "reading": "KARAŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KI.UD": {
+    "meszl_number": "737.596",
+    "readings": [
+      {
+        "count": 13,
+        "reading": "KISLAḪ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KID": {
+    "meszl_number": "484",
+    "readings": [
+      {
+        "count": 64,
+        "reading": "KID",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 36,
+        "reading": "LÍL",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 8,
+        "reading": "KE@4",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KAM": {
+    "meszl_number": "595",
+    "readings": [
+      {
+        "count": 214,
+        "reading": "KAM",
+        "type": "Determination"
+      },
+      {
+        "count": 139,
+        "reading": "KAM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 63,
+        "reading": "kam",
+        "type": "Hittite"
+      },
+      {
+        "count": 51,
+        "reading": "TU@7",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 33,
+        "reading": "ÚTUL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KAR": {
+    "meszl_number": "590",
+    "readings": [
+      {
+        "count": 363,
+        "reading": "kar",
+        "type": "Hittite"
+      },
+      {
+        "count": 13,
+        "reading": "KAR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KASKAL": {
+    "meszl_number": "302",
+    "readings": [
+      {
+        "count": 164,
+        "reading": "KASKAL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KASKAL.BU": {
+    "meszl_number": "302.580",
+    "readings": [
+      {
+        "count": 8,
+        "reading": "DANNA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KI": {
+    "meszl_number": "737",
+    "readings": [
+      {
+        "count": 2961,
+        "reading": "ki",
+        "type": "Hittite"
+      },
+      {
+        "count": 851,
+        "reading": "ke",
+        "type": "Hittite"
+      },
+      {
+        "count": 286,
+        "reading": "KI",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 19,
+        "reading": "KE",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 5,
+        "reading": "qí",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "KIN": {
+    "meszl_number": "815",
+    "readings": [
+      {
+        "count": 89,
+        "reading": "KIN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KIŠ": {
+    "meszl_number": "678",
+    "readings": [
+      {
+        "count": 133,
+        "reading": "kiš",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "KU": {
+    "meszl_number": "808",
+    "readings": [
+      {
+        "count": 3497,
+        "reading": "ku",
+        "type": "Hittite"
+      },
+      {
+        "count": 220,
+        "reading": "KU",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 25,
+        "reading": "TUKUL",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 11,
+        "reading": "TUŠ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "qú",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "KU@7": {
+    "meszl_number": "171",
+    "readings": [
+      {
+        "count": 64,
+        "reading": "KU@7",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KUG": {
+    "meszl_number": "745",
+    "readings": [
+      {
+        "count": 210,
+        "reading": "KÙ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KUG.GI": {
+    "meszl_number": "745.141",
+    "readings": [
+      {
+        "count": 94,
+        "reading": "GUŠKIN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "KUR": {
+    "meszl_number": "578",
+    "readings": [
+      {
+        "count": 888,
+        "reading": "KUR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 48,
+        "reading": "kur",
+        "type": "Hittite"
+      },
+      {
+        "count": 53,
+        "reading": "GÌN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 53,
+        "reading": "MI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 4,
+        "reading": "GÍG",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "KÁ": {
+    "meszl_number": "222",
+    "readings": [
+      {
+        "count": 89,
+        "reading": "KÁ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "LA": {
+    "meszl_number": "89",
+    "readings": [
+      {
+        "count": 1600,
+        "reading": "la",
+        "type": "Hittite"
+      },
+      {
+        "count": 16,
+        "reading": "LA",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "LAM": {
+    "meszl_number": "693",
+    "readings": [
+      {
+        "count": 94,
+        "reading": "LAM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 37,
+        "reading": "lam",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "LAGAB": {
+    "meszl_number": "755",
+    "readings": [
+      {
+        "count": 348,
+        "reading": "GUR@4",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 23,
+        "reading": "ḪAB",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 22,
+        "reading": "KUR@4",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "LI": {
+    "meszl_number": "85",
+    "readings": [
+      {
+        "count": 1650,
+        "reading": "li",
+        "type": "Hittite"
+      },
+      {
+        "count": 458,
+        "reading": "le",
+        "type": "Hittite"
+      },
+      {
+        "count": 62,
+        "reading": "LI",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "LIŠ": {
+    "meszl_number": "591",
+    "readings": [
+      {
+        "count": 56,
+        "reading": "DÍLIM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 13,
+        "reading": "liš",
+        "type": "Hittite"
+      },
+      {
+        "count": 4,
+        "reading": "LIŠ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "LIMMU": {
+    "meszl_number": "860",
+    "readings": [
+      {
+        "count": 112,
+        "reading": "4",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "LU": {
+    "meszl_number": "812",
+    "readings": [
+      {
+        "count": 768,
+        "reading": "lu",
+        "type": "Hittite"
+      },
+      {
+        "count": 381,
+        "reading": "UDU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 108,
+        "reading": "LU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 72,
+        "reading": "LU",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 10,
+        "reading": "DAB",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "LUGAL": {
+    "meszl_number": "266",
+    "readings": [
+      {
+        "count": 1003,
+        "reading": "LUGAL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "LUM": {
+    "meszl_number": "900",
+    "readings": [
+      {
+        "count": 143,
+        "reading": "LUM",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "LÀL": {
+    "meszl_number": "170",
+    "readings": [
+      {
+        "count": 98,
+        "reading": "LÀL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "LÚ": {
+    "meszl_number": "514",
+    "readings": [
+      {
+        "count": 854,
+        "reading": "LÚ",
+        "type": "Determination"
+      },
+      {
+        "count": 507,
+        "reading": "LÚ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MA": {
+    "meszl_number": "552",
+    "readings": [
+      {
+        "count": 6745,
+        "reading": "ma",
+        "type": "Hittite"
+      },
+      {
+        "count": 500,
+        "reading": "MA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 35,
+        "reading": "PÈŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MAR": {
+    "meszl_number": "483",
+    "readings": [
+      {
+        "count": 251,
+        "reading": "mar",
+        "type": "Hittite"
+      },
+      {
+        "count": 36,
+        "reading": "MAR",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "MÁŠ": {
+    "meszl_number": "130",
+    "readings": [
+      {
+        "count": 68,
+        "reading": "MÁŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MAḪ": {
+    "meszl_number": "91",
+    "readings": [
+      {
+        "count": 143,
+        "reading": "MAḪ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ME": {
+    "meszl_number": "753",
+    "readings": [
+      {
+        "count": 1498,
+        "reading": "me",
+        "type": "Hittite"
+      },
+      {
+        "count": 95,
+        "reading": "ME",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 12,
+        "reading": "mì",
+        "type": "Hittite"
+      },
+      {
+        "count": 8,
+        "reading": "BIL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MEŠ": {
+    "meszl_number": "754",
+    "readings": [
+      {
+        "count": 2809,
+        "reading": "MEŠ",
+        "type": "Determination"
+      },
+      {
+        "count": 11,
+        "reading": "eš@17",
+        "type": "Hittite"
+      },
+      {
+        "count": 11,
+        "reading": "meš",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "MI": {
+    "meszl_number": "681",
+    "readings": [
+      {
+        "count": 1831,
+        "reading": "mi",
+        "type": "Hittite"
+      },
+      {
+        "count": 109,
+        "reading": "GE@6",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "mé",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "MIN": {
+    "meszl_number": "825",
+    "readings": [
+      {
+        "count": 183,
+        "reading": "MIN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 414,
+        "reading": "2",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "MU": {
+    "meszl_number": "98",
+    "readings": [
+      {
+        "count": 1054,
+        "reading": "mu",
+        "type": "Hittite"
+      },
+      {
+        "count": 111,
+        "reading": "MU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 13,
+        "reading": "MUḪALDIM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MUNUS": {
+    "meszl_number": "883",
+    "readings": [
+      {
+        "count": 656,
+        "reading": "MUNUS",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 291,
+        "reading": "MUNUS",
+        "type": "Determination"
+      },
+      {
+        "count": 93,
+        "reading": "šal",
+        "type": "Hittite"
+      },
+      {
+        "count": 101,
+        "reading": "f",
+        "type": "Determination"
+      },
+      {
+        "count": 11,
+        "reading": "SAL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "AN.NA": {
+    "meszl_number": "10.110",
+    "readings": [
+      {
+        "count": 11,
+        "reading": "NAGGA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MUNUS.KUR": {
+    "meszl_number": "883.578",
+    "readings": [
+      {
+        "count": 38,
+        "reading": "GÉME",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "MUŠ": {
+    "meszl_number": "585",
+    "readings": [
+      {
+        "count": 64,
+        "reading": "MUŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "NA": {
+    "meszl_number": "110",
+    "readings": [
+      {
+        "count": 6445,
+        "reading": "na",
+        "type": "Hittite"
+      },
+      {
+        "count": 2200,
+        "reading": "NA",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "NA@4": {
+    "meszl_number": "385",
+    "readings": [
+      {
+        "count": 288,
+        "reading": "NA@4",
+        "type": "Determination"
+      }
+    ]
+  },
+  "NAM": {
+    "meszl_number": "134",
+    "readings": [
+      {
+        "count": 622,
+        "reading": "nam",
+        "type": "Hittite"
+      },
+      {
+        "count": 78,
+        "reading": "NAM",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "NE": {
+    "meszl_number": "313",
+    "readings": [
+      {
+        "count": 506,
+        "reading": "ne",
+        "type": "Hittite"
+      },
+      {
+        "count": 37,
+        "reading": "IZI",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 22,
+        "reading": "LÁM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "bí",
+        "type": "Hittite"
+      },
+      {
+        "count": 4,
+        "reading": "NE",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "NI": {
+    "meszl_number": "380",
+    "readings": [
+      {
+        "count": 2585,
+        "reading": "ni",
+        "type": "Hittite"
+      },
+      {
+        "count": 342,
+        "reading": "NI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 286,
+        "reading": "Ì",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 119,
+        "reading": "né",
+        "type": "Hittite"
+      },
+      {
+        "count": 21,
+        "reading": "LÍ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 5,
+        "reading": "lí",
+        "type": "Hittite"
+      },
+      {
+        "count": 3,
+        "reading": "ZAL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "NIN": {
+    "meszl_number": "887",
+    "readings": [
+      {
+        "count": 71,
+        "reading": "NIN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 9,
+        "reading": "NIN@9",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 4,
+        "reading": "EREŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "NU": {
+    "meszl_number": "112",
+    "readings": [
+      {
+        "count": 6880,
+        "reading": "nu",
+        "type": "Hittite"
+      },
+      {
+        "count": 367,
+        "reading": "NU",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 75,
+        "reading": "NU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "NÍG": {
+    "meszl_number": "859",
+    "readings": [
+      {
+        "count": 719,
+        "reading": "NINDA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 173,
+        "reading": "NINDA",
+        "type": "Determination"
+      },
+      {
+        "count": 136,
+        "reading": "NÍG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 70,
+        "reading": "GAR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 6,
+        "reading": "ŠÁ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "PA": {
+    "meszl_number": "464",
+    "readings": [
+      {
+        "count": 3620,
+        "reading": "pa",
+        "type": "Hittite"
+      },
+      {
+        "count": 238,
+        "reading": "PA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 61,
+        "reading": "GIDRU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 10,
+        "reading": "bá",
+        "type": "Hittite"
+      },
+      {
+        "count": 8,
+        "reading": "ḫat",
+        "type": "Hittite"
+      },
+      {
+        "count": 8,
+        "reading": "UGULA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "PA.LU": {
+    "meszl_number": "464.812",
+    "readings": [
+      {
+        "count": 19,
+        "reading": "SIPA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "PAB": {
+    "meszl_number": "92",
+    "readings": [
+      {
+        "count": 124,
+        "reading": "KÚR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 39,
+        "reading": "PAP",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 14,
+        "reading": "PAB",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "PAB.E": {
+    "meszl_number": "92.498",
+    "readings": [
+      {
+        "count": 7,
+        "reading": "PA@5",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "PI": {
+    "meszl_number": "598",
+    "readings": [
+      {
+        "count": 5905,
+        "reading": "wa",
+        "type": "Hittite"
+      },
+      {
+        "count": 59,
+        "reading": "WA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 25,
+        "reading": "pi",
+        "type": "Hittite"
+      },
+      {
+        "count": 22,
+        "reading": "GEŠTU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 4,
+        "reading": "ua",
+        "type": "Hittite"
+      },
+      {
+        "count": 2,
+        "reading": "GEŠTUG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "RA": {
+    "meszl_number": "511",
+    "readings": [
+      {
+        "count": 2800,
+        "reading": "ra",
+        "type": "Hittite"
+      },
+      {
+        "count": 502,
+        "reading": "RA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "RI": {
+    "meszl_number": "142",
+    "readings": [
+      {
+        "count": 1813,
+        "reading": "ri",
+        "type": "Hittite"
+      },
+      {
+        "count": 130,
+        "reading": "tal",
+        "type": "Hittite"
+      },
+      {
+        "count": 104,
+        "reading": "re",
+        "type": "Hittite"
+      },
+      {
+        "count": 69,
+        "reading": "RI",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "RU": {
+    "meszl_number": "111",
+    "readings": [
+      {
+        "count": 826,
+        "reading": "ru",
+        "type": "Hittite"
+      },
+      {
+        "count": 72,
+        "reading": "RU",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "SAG": {
+    "meszl_number": "184",
+    "readings": [
+      {
+        "count": 385,
+        "reading": "SAG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 84,
+        "reading": "SAG",
+        "type": "Determination"
+      },
+      {
+        "count": 8,
+        "reading": "SUR@14",
+        "type": "Determination"
+      }
+    ]
+  },
+  "SAR": {
+    "meszl_number": "541",
+    "readings": [
+      {
+        "count": 359,
+        "reading": "šar",
+        "type": "Hittite"
+      },
+      {
+        "count": 61,
+        "reading": "SAR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 46,
+        "reading": "KIRI@6",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 12,
+        "reading": "ŠAR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SIG": {
+    "meszl_number": "881",
+    "readings": [
+      {
+        "count": 111,
+        "reading": "SIG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SIG@5": {
+    "meszl_number": "729",
+    "readings": [
+      {
+        "count": 126,
+        "reading": "SIG@5",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SİLA": {
+    "meszl_number": "99",
+    "readings": [
+      {
+        "count": 542,
+        "reading": "QA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 150,
+        "reading": "qa",
+        "type": "Hittite"
+      },
+      {
+        "count": 71,
+        "reading": "ka@4",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "SİLA.ŠU.DUḪ": {
+    "meszl_number": "99.567.298",
+    "readings": [
+      {
+        "count": 33,
+        "reading": "SAGI",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SILA@4": {
+    "meszl_number": "408",
+    "readings": [
+      {
+        "count": 97,
+        "reading": "SILA@4",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SISKUR": {
+    "meszl_number": "696",
+    "readings": [
+      {
+        "count": 171,
+        "reading": "SISKUR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SISKUR.SISKUR": {
+    "meszl_number": "696.696",
+    "readings": [
+      {
+        "count": 256,
+        "reading": "SÍSKUR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "SU": {
+    "meszl_number": "16",
+    "readings": [
+      {
+        "count": 86,
+        "reading": "KUŠ",
+        "type": "Determination"
+      }
+    ]
+  },
+  "SÍG": {
+    "meszl_number": "816",
+    "readings": [
+      {
+        "count": 151,
+        "reading": "SÍG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 94,
+        "reading": "SÍG",
+        "type": "Determination"
+      }
+    ]
+  },
+  "TA": {
+    "meszl_number": "248",
+    "readings": [
+      {
+        "count": 4877,
+        "reading": "ta",
+        "type": "Hittite"
+      },
+      {
+        "count": 67,
+        "reading": "TA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 1,
+        "reading": "dá",
+        "type": "Hittite"
+      },
+      {
+        "count": 1,
+        "reading": "DÁ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "TAB": {
+    "meszl_number": "209",
+    "readings": [
+      {
+        "count": 73,
+        "reading": "tap",
+        "type": "Hittite"
+      },
+      {
+        "count": 73,
+        "reading": "TAP",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "tab",
+        "type": "Hittite"
+      },
+      {
+        "count": 7,
+        "reading": "TAB",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TAG": {
+    "meszl_number": "221",
+    "readings": [
+      {
+        "count": 83,
+        "reading": "ŠUM",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 33,
+        "reading": "šum",
+        "type": "Hittite"
+      },
+      {
+        "count": 8,
+        "reading": "TAG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TAR": {
+    "meszl_number": "9",
+    "readings": [
+      {
+        "count": 1246,
+        "reading": "tar",
+        "type": "Hittite"
+      },
+      {
+        "count": 7,
+        "reading": "ḫaš",
+        "type": "Hittite"
+      },
+      {
+        "count": 1,
+        "reading": "KUD",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TE": {
+    "meszl_number": "589",
+    "readings": [
+      {
+        "count": 1381,
+        "reading": "te",
+        "type": "Hittite"
+      },
+      {
+        "count": 129,
+        "reading": "TE",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 8,
+        "reading": "ṬE@4",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "TI": {
+    "meszl_number": "118",
+    "readings": [
+      {
+        "count": 2462,
+        "reading": "ti",
+        "type": "Hittite"
+      },
+      {
+        "count": 331,
+        "reading": "TI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 125,
+        "reading": "TI",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 4,
+        "reading": "DÌ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "TU": {
+    "meszl_number": "86",
+    "readings": [
+      {
+        "count": 889,
+        "reading": "tu",
+        "type": "Hittite"
+      },
+      {
+        "count": 523,
+        "reading": "TU",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 3,
+        "reading": "DÚ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TUK": {
+    "meszl_number": "827",
+    "readings": [
+      {
+        "count": 103,
+        "reading": "TUKU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TÚL": {
+    "meszl_number": "786",
+    "readings": [
+      {
+        "count": 107,
+        "reading": "PÚ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TUM": {
+    "meszl_number": "354",
+    "readings": [
+      {
+        "count": 94,
+        "reading": "TUM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 31,
+        "reading": "tum",
+        "type": "Hittite"
+      },
+      {
+        "count": 26,
+        "reading": "DUM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 10,
+        "reading": "DU@4",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 9,
+        "reading": "du@4",
+        "type": "Hittite"
+      },
+      {
+        "count": 4,
+        "reading": "dum",
+        "type": "Hittite"
+      },
+      {
+        "count": 10,
+        "reading": "tu@4",
+        "type": "Hittite"
+      },
+      {
+        "count": 12,
+        "reading": "TU@4",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 9,
+        "reading": "ÍB",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "TUR": {
+    "meszl_number": "255",
+    "readings": [
+      {
+        "count": 639,
+        "reading": "DUMU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 213,
+        "reading": "TUR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 7,
+        "reading": "KUN@5",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "TÚG": {
+    "meszl_number": "809",
+    "readings": [
+      {
+        "count": 121,
+        "reading": "TÚG",
+        "type": "Determination"
+      },
+      {
+        "count": 35,
+        "reading": "GI@7",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 35,
+        "reading": "ZÌ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 11,
+        "reading": "ŠÈ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 3,
+        "reading": "ÁZLAG",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 2,
+        "reading": "ZÍD",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "DAḪ": {
+    "meszl_number": "301",
+    "readings": [
+      {
+        "count": 51,
+        "reading": "túḫ",
+        "type": "Hittite"
+      },
+      {
+        "count": 32,
+        "reading": "taḫ",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "U": {
+    "meszl_number": "661",
+    "readings": [
+      {
+        "count": 2585,
+        "reading": "u",
+        "type": "Hittite"
+      },
+      {
+        "count": 401,
+        "reading": "10",
+        "type": "Numeral"
+      },
+      {
+        "count": 214,
+        "reading": "U",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "U.KA": {
+    "meszl_number": "661.24",
+    "readings": [
+      {
+        "count": 34,
+        "reading": "UGU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "U.MIN": {
+    "meszl_number": "661.825",
+    "readings": [
+      {
+        "count": 47,
+        "reading": "12",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "U.NÍG": {
+    "meszl_number": "661.859",
+    "readings": [
+      {
+        "count": 33,
+        "reading": "14",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "U.SAG": {
+    "meszl_number": "661.184",
+    "readings": [
+      {
+        "count": 15,
+        "reading": "UḪ@7",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "U.U": {
+    "meszl_number": "661.661",
+    "readings": [
+      {
+        "count": 15,
+        "reading": "20",
+        "type": "Numeral"
+      }
+    ]
+  },
+  "UB": {
+    "meszl_number": "504",
+    "readings": [
+      {
+        "count": 345,
+        "reading": "up",
+        "type": "Hittite"
+      },
+      {
+        "count": 70,
+        "reading": "UB",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 52,
+        "reading": "UP",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 40,
+        "reading": "ub",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "UD": {
+    "meszl_number": "596",
+    "readings": [
+      {
+        "count": 916,
+        "reading": "UTU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 622,
+        "reading": "ut",
+        "type": "Hittite"
+      },
+      {
+        "count": 377,
+        "reading": "TAM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 304,
+        "reading": "ud",
+        "type": "Hittite"
+      },
+      {
+        "count": 270,
+        "reading": "BABBAR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 236,
+        "reading": "UD",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 158,
+        "reading": "UT",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 92,
+        "reading": "U@4",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 26,
+        "reading": "ḪÁD",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 5,
+        "reading": "pir",
+        "type": "Hittite"
+      },
+      {
+        "count": 1,
+        "reading": "ZALAG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "UD.DU": {
+    "meszl_number": "596.350",
+    "readings": [
+      {
+        "count": 22,
+        "reading": "È",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "UD.KA.BAR": {
+    "meszl_number": "596.24.121",
+    "readings": [
+      {
+        "count": 115,
+        "reading": "ZABAR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "UG": {
+    "meszl_number": "296",
+    "readings": [
+      {
+        "count": 455,
+        "reading": "uk",
+        "type": "Hittite"
+      },
+      {
+        "count": 52,
+        "reading": "uq",
+        "type": "Hittite"
+      },
+      {
+        "count": 17,
+        "reading": "ug",
+        "type": "Hittite"
+      },
+      {
+        "count": 6,
+        "reading": "PÌRIG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "UL": {
+    "meszl_number": "698",
+    "readings": [
+      {
+        "count": 784,
+        "reading": "UL",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 247,
+        "reading": "ul",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "UM": {
+    "meszl_number": "238",
+    "readings": [
+      {
+        "count": 98,
+        "reading": "UM",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 82,
+        "reading": "um",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "UN": {
+    "meszl_number": "501",
+    "readings": [
+      {
+        "count": 1153,
+        "reading": "un",
+        "type": "Hittite"
+      },
+      {
+        "count": 122,
+        "reading": "UN",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "UR": {
+    "meszl_number": "828",
+    "readings": [
+      {
+        "count": 154,
+        "reading": "ur",
+        "type": "Hittite"
+      },
+      {
+        "count": 119,
+        "reading": "UR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "URU": {
+    "meszl_number": "71",
+    "readings": [
+      {
+        "count": 1385,
+        "reading": "URU",
+        "type": "Determination"
+      },
+      {
+        "count": 197,
+        "reading": "URU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 106,
+        "reading": "U@19",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "UZ": {
+    "meszl_number": "583",
+    "readings": [
+      {
+        "count": 189,
+        "reading": "uz",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "UZU": {
+    "meszl_number": "311",
+    "readings": [
+      {
+        "count": 388,
+        "reading": "UZU",
+        "type": "Determination"
+      }
+    ]
+  },
+  "UŠ": {
+    "meszl_number": "381",
+    "readings": [
+      {
+        "count": 2903,
+        "reading": "uš",
+        "type": "Hittite"
+      },
+      {
+        "count": 64,
+        "reading": "NITA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 27,
+        "reading": "UŠ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ÚR": {
+    "meszl_number": "341",
+    "readings": [
+      {
+        "count": 37,
+        "reading": "ÚR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 30,
+        "reading": "úr",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "ZA": {
+    "meszl_number": "851",
+    "readings": [
+      {
+        "count": 3143,
+        "reading": "za",
+        "type": "Hittite"
+      },
+      {
+        "count": 168,
+        "reading": "ZA",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 21,
+        "reading": "ṢA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 5,
+        "reading": "ṣa",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "ZAG": {
+    "meszl_number": "540",
+    "readings": [
+      {
+        "count": 167,
+        "reading": "ZAG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ZI": {
+    "meszl_number": "140",
+    "readings": [
+      {
+        "count": 5956,
+        "reading": "zi",
+        "type": "Hittite"
+      },
+      {
+        "count": 268,
+        "reading": "ZI",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 72,
+        "reading": "zi",
+        "type": "AOLuwian"
+      },
+      {
+        "count": 51,
+        "reading": "ze",
+        "type": "Hittite"
+      },
+      {
+        "count": 5,
+        "reading": "ṢÍ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 4,
+        "reading": "ṢÉ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 3,
+        "reading": "SÍ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ZÍ": {
+    "meszl_number": "259",
+    "readings": [
+      {
+        "count": 61,
+        "reading": "zé",
+        "type": "Hittite"
+      },
+      {
+        "count": 38,
+        "reading": "SE@20",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 10,
+        "reading": "ZÉ",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 10,
+        "reading": "ṢI",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 5,
+        "reading": "ṢE",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 4,
+        "reading": "ZÍ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ZU": {
+    "meszl_number": "15",
+    "readings": [
+      {
+        "count": 173,
+        "reading": "zu",
+        "type": "Hittite"
+      },
+      {
+        "count": 62,
+        "reading": "GÍN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 54,
+        "reading": "ZU",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 37,
+        "reading": "SÚ",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 17,
+        "reading": "ṢÚ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "É": {
+    "meszl_number": "495",
+    "readings": [
+      {
+        "count": 441,
+        "reading": "É",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "Ù": {
+    "meszl_number": "731",
+    "readings": [
+      {
+        "count": 150,
+        "reading": "Ù",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 85,
+        "reading": "ù",
+        "type": "Hittite"
+      },
+      {
+        "count": 3,
+        "reading": "LIBIR",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "Ú": {
+    "meszl_number": "490",
+    "readings": [
+      {
+        "count": 1790,
+        "reading": "ú",
+        "type": "Hittite"
+      },
+      {
+        "count": 896,
+        "reading": "Ú",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ŠA": {
+    "meszl_number": "566",
+    "readings": [
+      {
+        "count": 5275,
+        "reading": "ša",
+        "type": "Hittite"
+      },
+      {
+        "count": 1048,
+        "reading": "ŠA",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ŠAḪ": {
+    "meszl_number": "23",
+    "readings": [
+      {
+        "count": 59,
+        "reading": "ŠAḪ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠE": {
+    "meszl_number": "579",
+    "readings": [
+      {
+        "count": 912,
+        "reading": "še",
+        "type": "Hittite"
+      },
+      {
+        "count": 39,
+        "reading": "ŠE",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 17,
+        "reading": "NIGA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠID": {
+    "meszl_number": "485",
+    "readings": [
+      {
+        "count": 64,
+        "reading": "SANGA",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠEŠ": {
+    "meszl_number": "535",
+    "readings": [
+      {
+        "count": 77,
+        "reading": "ŠEŠ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠU": {
+    "meszl_number": "567",
+    "readings": [
+      {
+        "count": 1372,
+        "reading": "šu",
+        "type": "Hittite"
+      },
+      {
+        "count": 761,
+        "reading": "ŠU",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 323,
+        "reading": "ŠU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠUBUR": {
+    "meszl_number": "23",
+    "readings": [
+      {
+        "count": 59,
+        "reading": "ŠAH",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠÀ": {
+    "meszl_number": "599",
+    "readings": [
+      {
+        "count": 330,
+        "reading": "ŠÀ",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ŠÚ": {
+    "meszl_number": "869",
+    "readings": [
+      {
+        "count": 86,
+        "reading": "ŠÚ",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ḪA": {
+    "meszl_number": "856",
+    "readings": [
+      {
+        "count": 3745,
+        "reading": "ḫa",
+        "type": "Hittite"
+      },
+      {
+        "count": 192,
+        "reading": "Ḫa",
+        "type": "Hittite"
+      },
+      {
+        "count": 22,
+        "reading": "ḪA",
+        "type": "Akkadogram"
+      },
+      {
+        "count": 19,
+        "reading": "KU@6",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ḪAL": {
+    "meszl_number": "3",
+    "readings": [
+      {
+        "count": 319,
+        "reading": "ḫal",
+        "type": "Hittite"
+      },
+      {
+        "count": 10,
+        "reading": "ḪAL",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ḪAR": {
+    "meszl_number": "644",
+    "readings": [
+      {
+        "count": 735,
+        "reading": "ḫar",
+        "type": "Hittite"
+      },
+      {
+        "count": 199,
+        "reading": "ḪUR",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 180,
+        "reading": "ḫur",
+        "type": "Hittite"
+      },
+      {
+        "count": 85,
+        "reading": "ḪUR",
+        "type": "Determination"
+      },
+      {
+        "count": 31,
+        "reading": "mur",
+        "type": "Hittite"
+      },
+      {
+        "count": 17,
+        "reading": "ḪAR",
+        "type": "Akkadogram"
+      }
+    ]
+  },
+  "ḪAR.ḪAR": {
+    "meszl_number": "644.644",
+    "readings": [
+      {
+        "count": 15,
+        "reading": "ARA@5",
+        "type": "Hittite"
+      }
+    ]
+  },
+  "ḪI": {
+    "meszl_number": "631",
+    "readings": [
+      {
+        "count": 1244,
+        "reading": "ḪI",
+        "type": "Determination"
+      },
+      {
+        "count": 980,
+        "reading": "ḫi",
+        "type": "Hittite"
+      },
+      {
+        "count": 86,
+        "reading": "ḫe",
+        "type": "Hittite"
+      },
+      {
+        "count": 80,
+        "reading": "DÙG",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ḪI.A": {
+    "meszl_number": "631.839",
+    "readings": [
+      {
+        "count": 91,
+        "reading": "ḪÁ",
+        "type": "Determination"
+      }
+    ]
+  },
+  "ḪU": {
+    "meszl_number": "132",
+    "readings": [
+      {
+        "count": 2047,
+        "reading": "ḫu",
+        "type": "Hittite"
+      },
+      {
+        "count": 206,
+        "reading": "MUŠEN",
+        "type": "Sumerogram"
+      },
+      {
+        "count": 82,
+        "reading": "MUŠEN",
+        "type": "Determination"
+      },
+      {
+        "count": 3,
+        "reading": "ḪU",
+        "type": "Sumerogram"
+      }
+    ]
+  },
+  "ḪUL": {
+    "meszl_number": "733",
+    "readings": [
+      {
+        "count": 165,
+        "reading": "ḪUL",
+        "type": "Sumerogram"
+      }
+    ]
+  }
+}
