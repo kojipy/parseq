@@ -208,6 +208,7 @@ class CrossEntropySystem(BaseSystem):
     def forward_logits_loss(
         self, images: Tensor, labels: List[str]
     ) -> Tuple[Tensor, Tensor, int]:
+        labels = [label.split(",") for label in labels]
         targets = self.tokenizer.encode(labels, self.device)
         targets = targets[:, 1:]  # Discard <bos>
         max_len = targets.shape[1] - 1  # exclude <eos> from count
