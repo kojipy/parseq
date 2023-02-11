@@ -1,0 +1,32 @@
+{
+    "dataset": {
+        "dataset": "hpm",
+        "genre": "rituals",
+        "corpus": "CTH.434.4.json"
+    },
+    "line": [
+        {
+            "index": "6",
+            "signs": [
+                [
+                    {
+                        "reading": "a",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ši",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "wa",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "az",
+                        "type": "Hittite"
+                    }
+                ]
+            ]
+        }
+    ]
+}

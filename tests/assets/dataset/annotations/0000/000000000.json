@@ -1,0 +1,60 @@
+{
+    "dataset": {
+        "dataset": "hpm",
+        "genre": "rituals",
+        "corpus": "CTH.477.json"
+    },
+    "line": [
+        {
+            "index": "109",
+            "signs": [
+                [
+                    {
+                        "reading": "ḫar",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "na",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "a",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ú",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "i",
+                        "type": "Hittite"
+                    }
+                ],
+                [
+                    {
+                        "reading": "QA",
+                        "type": "Akkadogram"
+                    },
+                    {
+                        "reading": "TAM",
+                        "type": "Akkadogram"
+                    }
+                ],
+                [
+                    {
+                        "reading": "pa",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ra",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "a",
+                        "type": "Hittite"
+                    }
+                ]
+            ]
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "dataset": {
+        "dataset": "hpm",
+        "genre": "decree",
+        "corpus": "CTH.272.json"
+    },
+    "line": [
+        {
+            "index": "34",
+            "signs": [
+                [
+                    {
+                        "reading": "A",
+                        "type": "Akkadogram"
+                    },
+                    {
+                        "reading": "WA",
+                        "type": "Akkadogram"
+                    },
+                    {
+                        "reading": "A",
+                        "type": "Akkadogram"
+                    },
+                    {
+                        "reading": "AT",
+                        "type": "Akkadogram"
+                    }
+                ],
+                [
+                    {
+                        "reading": "A",
+                        "type": "Akkadogram"
+                    },
+                    {
+                        "reading": "BI",
+                        "type": "Akkadogram"
+                    },
+                    {
+                        "reading": "YA",
+                        "type": "Akkadogram"
+                    }
+                ],
+                [
+                    {
+                        "reading": "ar",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ḫa",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "a",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "an",
+                        "type": "Hittite"
+                    }
+                ],
+                [
+                    {
+                        "reading": "ḫar",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "te",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ni",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "i",
+                        "type": "Hittite"
+                    }
+                ]
+            ]
+        }
+    ]
+}

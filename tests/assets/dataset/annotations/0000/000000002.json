@@ -1,0 +1,28 @@
+{
+    "dataset": {
+        "dataset": "hpm",
+        "genre": "decree",
+        "corpus": "CTH.23.3.json"
+    },
+    "line": [
+        {
+            "index": "5",
+            "signs": [
+                [
+                    {
+                        "reading": "za",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ni",
+                        "type": "Hittite"
+                    },
+                    {
+                        "reading": "ir",
+                        "type": "Hittite"
+                    }
+                ]
+            ]
+        }
+    ]
+}
