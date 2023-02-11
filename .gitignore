@@ -155,3 +155,4 @@ config/*
 data/*
 !data/*.py
 !data/*.csv
+!data/target_hittite_cuneiform_signs.json
