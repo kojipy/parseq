@@ -264,6 +264,6 @@ class AbgalDataModule(pl.LightningDataModule):
             dataset=dataset,
             batch_size=self._batch_size,
             num_workers=self._num_workers,
-            shuffl=True,
+            shuffle=True,
             pin_memory=True,
         )
