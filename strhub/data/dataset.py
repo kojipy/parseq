@@ -101,29 +101,9 @@ class SyntheticCuneiformLineImage(Dataset):
         image_path = self._get_image_path(index)
 
         image = Image.open(str(image_path)).convert("RGB")
-        width = int(image.width * (self.img_height / image.height))
-        width = self._resize(width, 128, 1536)
-
-        image = image.resize((width, self.img_height), resample=Image.BICUBIC)
+        image = self._keep_aspect_resize(image, (self.img_width, self.img_height))
         image = ImageOps.pad(
             image, (self.img_width, self.img_height), color=(0, 0, 0), centering=(0, 0)
-        )
-
-        img_above = Image.open(
-            str(self._get_image_path(random.randint(self.first_idx, self.last_idx)))
-        ).convert("RGB")
-        img_below = Image.open(
-            str(self._get_image_path(random.randint(self.first_idx, self.last_idx)))
-        ).convert("RGB")
-
-        stacked = self._vstack([img_above, image, img_below])
-        image = stacked.crop(
-            (
-                0,
-                stacked.height // 2 - int(image.height / 2 * 1.75),
-                stacked.width,
-                stacked.height // 2 + int(image.height / 2 * 1.75),
-            )
         )
 
         image = self.transform(image)
@@ -137,26 +117,20 @@ class SyntheticCuneiformLineImage(Dataset):
 
         return image, label_comma_separate
 
-    def _resize(self, v, minv, maxv):
-        scale = 1 + random.uniform(-0.2, 0.2)
-        return int(max(minv, min(maxv, scale * v)))
+    def _keep_aspect_resize(self, image: Image.Image, size: Tuple[int, int]):
+        width, height = size
+        x_ratio = width / image.width
+        y_ratio = height / image.height
 
-    def _vstack(self, images):
-        if len(images) == 0:
-            raise ValueError("Need 0 or more images")
+        if x_ratio < y_ratio:
+            resize_size = (width, round(image.height * x_ratio))
+        else:
+            resize_size = (round(image.width * y_ratio), height)
 
-        if isinstance(images[0], np.ndarray):
-            images = [Image.fromarray(img) for img in images]
+        # リサイズ後の画像サイズにリサイズ
+        resized_image = image.resize(resize_size, resample=Image.BICUBIC)
 
-        width = max([img.size[0] for img in images])
-        height = sum([img.size[1] for img in images])
-        stacked = Image.new(images[0].mode, (width, height))
-
-        y_pos = 0
-        for img in images:
-            stacked.paste(img, (0, y_pos))
-            y_pos += img.size[1]
-        return stacked
+        return resized_image
 
 
 class SyntheticCuneiformValidationLineImage(Dataset):
