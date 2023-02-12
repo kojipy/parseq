@@ -104,7 +104,7 @@ class SyntheticCuneiformLineImage(Dataset):
         width = int(image.width * (self.img_height / image.height))
         width = self._resize(width, self.img_width, self.img_height)
 
-        image = image.resize((width, self.img_height), resample=Image.BILINEAR)
+        image = image.resize((width, self.img_height), resample=Image.BICUBIC)
         image = ImageOps.pad(
             image, (self.img_width, self.img_height), color=(0, 0, 0), centering=(0, 0)
         )
