@@ -87,14 +87,7 @@ class Tokenizer:
         return batch_tokens, batch_probs
 
     def _tok2ids(self, tokens: List[str]) -> List[int]:
-        ids = []
-        for token in tokens:
-            if token not in self._reading_to_signs.keys():
-                ids.append(self.unk_id)
-            else:
-                ids.extend(self._reading_to_signs[token])
-
-        return ids
+        return [self._sign_to_index[token] for token in tokens]
 
     def _ids2tok(self, token_ids: List[int]) -> List[str]:
         return [self._index_to_sign[token_id] for token_id in token_ids]
@@ -118,7 +111,7 @@ class Tokenizer:
         """
         Load target signs json.
         """
-        reading_to_signs: Dict[str, List[int]] = {}
+        reading_to_signs: Dict[str, List[str]] = {}
         sign_to_index: Dict[str, int] = {self.EOS: 0, self.UNK: 1, self.SPC: 2}
         index_to_sign: Dict[int, str] = {}
         # create inverse dictionary of sign_to_index
@@ -132,12 +125,13 @@ class Tokenizer:
             sign_indices = []  # list of int sign indices
             for sign in signs.split("."):
                 if sign not in sign_to_index:
-                    sign_to_index[sign] = len(sign_to_index)
-                    index_to_sign[sign_to_index[sign]] = sign
+                    idx: int = len(sign_to_index)
+                    sign_to_index[sign] = idx
+                    index_to_sign[idx] = sign
                 sign_indices.append(sign_to_index[sign])
 
             for reading in loaded[signs]["readings"]:
-                reading_to_signs[reading["reading"]] = sign_indices
+                reading_to_signs[reading["reading"]] = signs.split(".")
 
         for token in (self.BOS, self.PAD):
             idx = len(sign_to_index)

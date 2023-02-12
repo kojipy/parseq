@@ -21,12 +21,14 @@ from torch.utils.data import DataLoader
 from torchvision import transforms as T
 
 from .dataset import SyntheticCuneiformLineImage, SyntheticCuneiformValidationLineImage
+from .tokenizer import Tokenizer
 
 
 class AbgalDataModule(pl.LightningDataModule):
     def __init__(
         self,
         synth_root_dir: str,
+        target_signs_file: str,
         real_root_dir: str,
         train_first_idx: int,
         train_last_idx: int,
@@ -41,9 +43,9 @@ class AbgalDataModule(pl.LightningDataModule):
         self._synth_root_dir = synth_root_dir
         self._synth_images_root_dir = str(Path(self._synth_root_dir) / "images")
         self._synth_text_root_dir = str(Path(self._synth_root_dir) / "annotations")
+        self._tokenizer = Tokenizer(target_signs_file)
         self._real_root_dir = real_root_dir
-        self._real_images_root_dir = str(Path(self._real_root_dir) / "images")
-        self._real_text_root_dir = str(Path(self._real_root_dir) / "annotations")
+        self._real_images_root_dir = self._real_root_dir
         self._train_first_idx = train_first_idx
         self._train_last_idx = train_last_idx
         self._valid_first_idx = valid_first_idx
@@ -75,6 +77,7 @@ class AbgalDataModule(pl.LightningDataModule):
         return SyntheticCuneiformLineImage(
             images_root_dir=self._synth_images_root_dir,
             texts_root_dir=self._synth_text_root_dir,
+            reading2signs=self._tokenizer._reading_to_signs,
             first_idx=self._train_first_idx,
             last_idx=self._train_last_idx,
             img_height=self._img_height,
@@ -87,6 +90,7 @@ class AbgalDataModule(pl.LightningDataModule):
         return SyntheticCuneiformLineImage(
             images_root_dir=self._synth_images_root_dir,
             texts_root_dir=self._synth_text_root_dir,
+            reading2signs=self._tokenizer._reading_to_signs,
             first_idx=self._valid_first_idx,
             last_idx=self._valid_last_idx,
             img_height=self._img_height,
@@ -98,6 +102,7 @@ class AbgalDataModule(pl.LightningDataModule):
     def real_dataset(self):
         return SyntheticCuneiformValidationLineImage(
             images_root_dir=self._real_images_root_dir,
+            reading2signs=self._tokenizer._reading_to_signs,
             transform=self.get_transform(augment=False, img_height=self._img_height),
             img_height=self._img_height,
             img_width=self._img_width,

@@ -15,6 +15,7 @@ model:
 data:
   _target_: strhub.data.module.AbgalDataModule
   synth_root_dir: data
+  target_signs_file: data/target_hittite_cuneiform_signs.json
   real_root_dir: data
   train_first_idx: 0
   train_last_idx: 100

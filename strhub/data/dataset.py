@@ -18,7 +18,7 @@ import json
 import logging
 import random
 from pathlib import Path
-from typing import List, Tuple
+from typing import Dict, List, Tuple
 
 import numpy as np
 import torch
@@ -31,9 +31,11 @@ log = logging.getLogger(__name__)
 
 class LabelFile:
     SPACE = " "
+    UNK = "[UNK]"
 
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: str, reading_to_signs: Dict) -> None:
         self._path = path
+        self._reading_to_signs = reading_to_signs
         self._label = self._load()
 
     def _load(self) -> List[str]:
@@ -55,8 +57,21 @@ class LabelFile:
                 label.append(self.SPACE)
 
         label = label[:-1]  # remove last space
+        label = self._reading2signs(label)
 
         return label
+
+    def _reading2signs(self, tokens: List[str]) -> List[str]:
+        signs = []
+        for token in tokens:
+            if token == self.SPACE:
+                signs.append(self.SPACE)
+            elif token not in self._reading_to_signs.keys():
+                signs.append(self.UNK)
+            else:
+                signs.extend(self._reading_to_signs[token])
+
+        return signs
 
     @property
     def label(self) -> List[str]:
@@ -69,6 +84,7 @@ class SyntheticCuneiformLineImage(Dataset):
         *,
         images_root_dir: str,
         texts_root_dir: str,
+        reading2signs: Dict,
         first_idx: int,
         last_idx: int,
         transform: T.Compose,
@@ -81,6 +97,7 @@ class SyntheticCuneiformLineImage(Dataset):
 
         self.first_idx = first_idx
         self.last_idx = last_idx
+        self.reading2signs = reading2signs
         self.images_root_dir = images_root_dir
         self.texts_root_dir = texts_root_dir
         self.img_height = img_height
@@ -111,7 +128,7 @@ class SyntheticCuneiformLineImage(Dataset):
         text_path = (
             Path(self.texts_root_dir) / f"{index//(10**3):04d}" / f"{index:09d}.json"
         )
-        label: List[str] = LabelFile(str(text_path)).label
+        label: List[str] = LabelFile(str(text_path), self.reading2signs).label
         # Dataloader内でstackされるのを回避するために文字列型にキャスト
         label_comma_separate: str = ",".join(label)
 
@@ -134,15 +151,19 @@ class SyntheticCuneiformLineImage(Dataset):
 
 
 class SyntheticCuneiformValidationLineImage(Dataset):
+    UNK = "[UNK]"
+
     def __init__(
         self,
         *,
         images_root_dir: str,
+        reading2signs: Dict,
         transform: T.Compose,
         img_height: int = 96,
         img_width: int = 64 * 21,
     ):
         self.images_root_dir = images_root_dir
+        self.reading2signs = reading2signs
         self.img_height = img_height
         self.img_width = img_width
         self.transform = transform
@@ -250,5 +271,16 @@ class SyntheticCuneiformValidationLineImage(Dataset):
         image = self.transform(image)
 
         target = self._text_raw_data[index]
+        label = self._reading2signs(target)
 
-        return image, target
+        return image, label
+
+    def _reading2signs(self, tokens: List[str]) -> List[str]:
+        signs = []
+        for token in tokens:
+            if token not in self.reading2signs.keys():
+                signs.append(self.UNK)
+            else:
+                signs.extend(self.reading2signs[token])
+
+        return signs
