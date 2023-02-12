@@ -13,9 +13,9 @@ DATASET_ROOT = "tests/assets/dataset"
 TRANFORM = T.Compose(
     [
         T.RandomApply(
-            transforms=[T.GaussianBlur(kernel_size=(5, 9), sigma=(0.1, 5))], p=0.3
+            transforms=[T.GaussianBlur(kernel_size=(3, 5), sigma=(0.1, 1.0))], p=1.0
         ),
-        T.RandomRotation(degrees=(0, 3)),
+        T.RandomRotation(degrees=(0, 1)),
         T.Resize(32),
         T.Grayscale(),
         T.ToTensor(),
