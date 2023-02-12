@@ -19,8 +19,8 @@ from dataclasses import dataclass
 from typing import List, Optional, Tuple
 
 import pytorch_lightning as pl
-import torch
 import torch.nn.functional as F
+from loguru import logger
 from nltk import edit_distance
 from pytorch_lightning.utilities.types import EPOCH_OUTPUT, STEP_OUTPUT
 from timm.optim import create_optimizer_v2
@@ -130,13 +130,15 @@ class BaseSystem(pl.LightningModule, ABC):
             # is exactly 25 characters, but if processed by CharsetAdapter for the 36-char set, it becomes 23 characters
             # long only, which sets max_label_length = 23. This will cause the model prediction to be truncated.
             logits = self.forward(images)
-            loss = (
-                loss_numel
-            ) = None  # Only used for validation; not needed at test-time.
+            # Only used for validation; not needed at test-time.
+            loss = loss_numel = None
 
         probs = logits.softmax(-1)
         preds, probs = self.tokenizer.decode(probs)
         for pred, prob, gt in zip(preds, probs, labels):
+            logger.info("Label\t: " + str(gt))
+            logger.info("Pred\t: " + str(pred) + "\n")
+
             confidence += prob.prod().item()
             # Follow ICDAR 2019 definition of N.E.D.
             ned += edit_distance(pred, gt) / max(len(pred), len(gt))
@@ -144,6 +146,7 @@ class BaseSystem(pl.LightningModule, ABC):
                 correct += 1
             total += 1
             label_length += len(pred)
+
         return dict(
             output=BatchResult(
                 total, correct, ned, confidence, label_length, loss, loss_numel
