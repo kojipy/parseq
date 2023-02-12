@@ -60,10 +60,10 @@ class AbgalDataModule(pl.LightningDataModule):
             augments.extend(
                 [
                     T.RandomApply(
-                        transforms=[T.GaussianBlur(kernel_size=(5, 9), sigma=(0.1, 5))],
+                        transforms=[T.GaussianBlur(kernel_size=(3, 5), sigma=(0.1, 1))],
                         p=0.3,
                     ),
-                    T.RandomRotation(degrees=(0, 3)),
+                    T.RandomRotation(degrees=(0, 1)),
                 ]
             )
         augments.extend([T.Resize(img_height), T.Grayscale(), T.ToTensor()])
