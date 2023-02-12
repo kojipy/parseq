@@ -41,7 +41,7 @@ class Tokenizer:
         self.pad_id = self._sign_to_index[self.PAD]
 
     def encode(
-        self, labels: List[str], device: Optional[torch.device] = None
+        self, labels: List[List[str]], device: Optional[torch.device] = None
     ) -> Tensor:
         """
         Generate token indexes from batched strings

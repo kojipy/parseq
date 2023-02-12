@@ -113,6 +113,7 @@ class BaseSystem(pl.LightningModule, ABC):
 
     def _eval_step(self, batch, validation: bool) -> Optional[STEP_OUTPUT]:
         images, labels = batch
+        labels = [label.split(",") for label in labels]
 
         correct = 0
         total = 0
@@ -200,9 +201,8 @@ class CrossEntropySystem(BaseSystem):
         self.pad_id = tokenizer.pad_id
 
     def forward_logits_loss(
-        self, images: Tensor, labels: List[str]
+        self, images: Tensor, labels: List[List[str]]
     ) -> Tuple[Tensor, Tensor, int]:
-        labels = [label.split(",") for label in labels]
         targets = self.tokenizer.encode(labels, self.device)
         targets = targets[:, 1:]  # Discard <bos>
         max_len = targets.shape[1] - 1  # exclude <eos> from count
