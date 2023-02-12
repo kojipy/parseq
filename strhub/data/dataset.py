@@ -102,7 +102,7 @@ class SyntheticCuneiformLineImage(Dataset):
 
         image = Image.open(str(image_path)).convert("RGB")
         width = int(image.width * (self.img_height / image.height))
-        width = self._resize(width, self.img_width, self.img_height)
+        width = self._resize(width, 128, 1536)
 
         image = image.resize((width, self.img_height), resample=Image.BICUBIC)
         image = ImageOps.pad(
@@ -125,7 +125,6 @@ class SyntheticCuneiformLineImage(Dataset):
                 stacked.height // 2 + int(image.height / 2 * 1.75),
             )
         )
-        image = image.resize((self.img_width, self.img_height))
 
         image = self.transform(image)
 
