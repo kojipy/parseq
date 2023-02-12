@@ -54,7 +54,7 @@ class AbgalDataModule(pl.LightningDataModule):
         self._num_workers = num_workers
 
     @staticmethod
-    def get_transform(augment: bool):
+    def get_transform(augment: bool, img_height: int):
         augments = []
         if augment:
             augments.extend(
@@ -66,7 +66,7 @@ class AbgalDataModule(pl.LightningDataModule):
                     T.RandomRotation(degrees=(0, 3)),
                 ]
             )
-        augments.extend([T.Resize(32), T.Grayscale(), T.ToTensor()])
+        augments.extend([T.Resize(img_height), T.Grayscale(), T.ToTensor()])
 
         return T.Compose(augments)
 
@@ -79,7 +79,7 @@ class AbgalDataModule(pl.LightningDataModule):
             last_idx=self._train_last_idx,
             img_height=self._img_height,
             img_width=self._img_width,
-            transform=self.get_transform(augment=True),
+            transform=self.get_transform(augment=True, img_height=self._img_height),
         )
 
     @property
@@ -91,14 +91,14 @@ class AbgalDataModule(pl.LightningDataModule):
             last_idx=self._valid_last_idx,
             img_height=self._img_height,
             img_width=self._img_width,
-            transform=self.get_transform(augment=False),
+            transform=self.get_transform(augment=False, img_height=self._img_height),
         )
 
     @property
     def real_dataset(self):
         return SyntheticCuneiformValidationLineImage(
             images_root_dir=self._real_images_root_dir,
-            transform=self.get_transform(augment=False),
+            transform=self.get_transform(augment=False, img_height=self._img_height),
             img_height=self._img_height,
             img_width=self._img_width,
         )
