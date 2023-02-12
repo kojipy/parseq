@@ -30,18 +30,6 @@ from strhub.data.module import AbgalDataModule
 from strhub.models.base import BaseSystem
 from strhub.models.utils import get_pretrained_weights
 
-transform = T.Compose(
-    [
-        T.RandomApply(
-            transforms=[T.GaussianBlur(kernel_size=(5, 9), sigma=(0.1, 5))], p=0.3
-        ),
-        T.RandomRotation(degrees=(0, 3)),
-        T.Resize(32),
-        T.Grayscale(),
-        T.ToTensor(),
-    ]
-)
-
 
 @hydra.main(config_path="configs", config_name="main", version_base="1.2")
 def main(config: DictConfig):
@@ -101,7 +89,7 @@ def main(config: DictConfig):
         strategy=trainer_strategy,
         enable_model_summary=False,
         callbacks=[checkpoint, swa],
-        log_every_n_steps=100,
+        log_every_n_steps=10,
     )
     trainer.fit(model, datamodule=datamodule, ckpt_path=config.ckpt_path)
 
