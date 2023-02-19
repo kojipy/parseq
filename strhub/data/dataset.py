@@ -12,18 +12,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import glob
-import io
 import json
 import logging
-import random
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-import numpy as np
 import torch
 import torchvision.transforms as T
-from PIL import Image, ImageOps
+from PIL import Image
 from torch.utils.data import Dataset
 
 log = logging.getLogger(__name__)
