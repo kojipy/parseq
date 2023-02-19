@@ -36,7 +36,8 @@ class LabelFile:
     def __init__(self, path: str, reading2signs_map: Dict) -> None:
         self._path = path
         self._reading2signs_map = reading2signs_map
-        self._label = self._load()
+        self._readings = self._load()
+        self._signs = self._reading2signs(self._readings)
 
     def _load(self) -> List[str]:
         """
@@ -57,7 +58,6 @@ class LabelFile:
                 label.append(self.SPACE)
 
         label = label[:-1]  # remove last space
-        label = self._reading2signs(label)
 
         return label
 
@@ -74,8 +74,12 @@ class LabelFile:
         return signs
 
     @property
-    def label(self) -> List[str]:
-        return self._label
+    def readings(self) -> List[str]:
+        return self._readings
+
+    @property
+    def signs(self) -> List[str]:
+        return self._signs
 
 
 class SyntheticCuneiformLineImage(Dataset):
@@ -122,11 +126,11 @@ class SyntheticCuneiformLineImage(Dataset):
         text_path = (
             Path(self.texts_root_dir) / f"{index//(10**3):04d}" / f"{index:09d}.json"
         )
-        label: List[str] = LabelFile(str(text_path), self.reading2signs).label
+        signs: List[str] = LabelFile(str(text_path), self.reading2signs).signs
         # Dataloader内でstackされるのを回避するために文字列型にキャスト
-        label_comma_separate: str = ",".join(label)
+        signs_comma_separate: str = ",".join(signs)
 
-        return image, label_comma_separate
+        return image, signs_comma_separate
 
     def _keep_aspect_resize(self, image: Image.Image, size: Tuple[int, int]):
         width, height = size
