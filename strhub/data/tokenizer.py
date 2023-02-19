@@ -30,7 +30,7 @@ class Tokenizer:
 
     def __init__(self, target_signs_file: str) -> None:
         (
-            self._reading_to_signs,
+            self._reading2signs_map,
             self._sign_to_index,
             self._index_to_sign,
         ) = self._load_target_signs(target_signs_file)
@@ -111,7 +111,7 @@ class Tokenizer:
         """
         Load target signs json.
         """
-        reading_to_signs: Dict[str, List[str]] = {}
+        reading2signs_map: Dict[str, List[str]] = {}
         sign_to_index: Dict[str, int] = {self.EOS: 0, self.UNK: 1, self.SPC: 2}
         index_to_sign: Dict[int, str] = {}
         # create inverse dictionary of sign_to_index
@@ -131,11 +131,11 @@ class Tokenizer:
                 sign_indices.append(sign_to_index[sign])
 
             for reading in loaded[signs]["readings"]:
-                reading_to_signs[reading["reading"]] = signs.split(".")
+                reading2signs_map[reading["reading"]] = signs.split(".")
 
         for token in (self.BOS, self.PAD):
             idx = len(sign_to_index)
             sign_to_index[token] = idx
             index_to_sign[idx] = token
 
-        return reading_to_signs, sign_to_index, index_to_sign
+        return reading2signs_map, sign_to_index, index_to_sign

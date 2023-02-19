@@ -33,9 +33,9 @@ class LabelFile:
     SPACE = " "
     UNK = "[UNK]"
 
-    def __init__(self, path: str, reading_to_signs: Dict) -> None:
+    def __init__(self, path: str, reading2signs_map: Dict) -> None:
         self._path = path
-        self._reading_to_signs = reading_to_signs
+        self._reading2signs_map = reading2signs_map
         self._label = self._load()
 
     def _load(self) -> List[str]:
@@ -66,10 +66,10 @@ class LabelFile:
         for token in tokens:
             if token == self.SPACE:
                 signs.append(self.SPACE)
-            elif token not in self._reading_to_signs.keys():
+            elif token not in self._reading2signs_map.keys():
                 signs.append(self.UNK)
             else:
-                signs.extend(self._reading_to_signs[token])
+                signs.extend(self._reading2signs_map[token])
 
         return signs
 
