@@ -114,14 +114,8 @@ class SyntheticCuneiformLineImage(Dataset):
         return self.last_idx - self.first_idx + 1
 
     def __getitem__(self, index: int) -> Tuple[torch.Tensor, str]:
-        # Image
         image_path = self._get_image_path(index)
-
         image = Image.open(str(image_path)).convert("RGB")
-        image = self._keep_aspect_resize(image, (self.img_width, self.img_height))
-        image = ImageOps.pad(
-            image, (self.img_width, self.img_height), color=(0, 0, 0), centering=(0, 0)
-        )
 
         image = self.transform(image)
 

@@ -13,10 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pathlib import Path, PurePath
-from typing import Callable, Optional, Sequence, Tuple
+from pathlib import Path
+from typing import Tuple
 
 import pytorch_lightning as pl
+from PIL import Image, ImageOps
 from torch.utils.data import DataLoader
 from torchvision import transforms as T
 
@@ -56,8 +57,11 @@ class AbgalDataModule(pl.LightningDataModule):
         self._num_workers = num_workers
 
     @staticmethod
-    def get_transform(augment: bool, img_height: int):
-        augments = []
+    def get_transform(augment: bool, img_width: int, img_height: int):
+        augments = [
+            KeepAspectResize((img_width, img_height)),
+            Pad((img_width, img_height)),
+        ]
         if augment:
             augments.extend(
                 [
@@ -82,7 +86,9 @@ class AbgalDataModule(pl.LightningDataModule):
             last_idx=self._train_last_idx,
             img_height=self._img_height,
             img_width=self._img_width,
-            transform=self.get_transform(augment=True, img_height=self._img_height),
+            transform=self.get_transform(
+                augment=True, img_width=self._img_width, img_height=self._img_height
+            ),
         )
 
     @property
@@ -95,7 +101,9 @@ class AbgalDataModule(pl.LightningDataModule):
             last_idx=self._valid_last_idx,
             img_height=self._img_height,
             img_width=self._img_width,
-            transform=self.get_transform(augment=False, img_height=self._img_height),
+            transform=self.get_transform(
+                augment=False, img_width=self._img_width, img_height=self._img_height
+            ),
         )
 
     @property
@@ -103,7 +111,9 @@ class AbgalDataModule(pl.LightningDataModule):
         return SyntheticCuneiformValidationLineImage(
             images_root_dir=self._real_images_root_dir,
             reading2signs=self._tokenizer._reading_to_signs,
-            transform=self.get_transform(augment=False, img_height=self._img_height),
+            transform=self.get_transform(
+                augment=False, img_width=self._img_width, img_height=self._img_height
+            ),
             img_height=self._img_height,
             img_width=self._img_width,
         )
@@ -127,3 +137,39 @@ class AbgalDataModule(pl.LightningDataModule):
             num_workers=self._num_workers,
             pin_memory=True,
         )
+
+
+class KeepAspectResize:
+    def __init__(self, size: Tuple[int, int]) -> None:
+        """
+        Args:
+            size (Tuple[int, int]): target image size. (width, height)
+        """
+        self._size = size
+
+    def __call__(self, image: Image.Image):
+        width, height = self._size
+        x_ratio = width / image.width
+        y_ratio = height / image.height
+
+        if x_ratio < y_ratio:
+            resize_size = (width, round(image.height * x_ratio))
+        else:
+            resize_size = (round(image.width * y_ratio), height)
+
+        resized_image = image.resize(resize_size, resample=Image.BICUBIC)
+
+        return resized_image
+
+
+class Pad:
+    def __init__(self, size: Tuple[int, int]) -> None:
+        """
+        Args:
+            size (Tuple[int, int]): target image size. (width, height)
+        """
+        self._size = size
+
+    def __call__(self, image: Image.Image):
+        width, height = self._size
+        return ImageOps.pad(image, (width, height), color=(0, 0, 0), centering=(0, 0))
