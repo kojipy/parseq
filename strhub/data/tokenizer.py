@@ -31,14 +31,14 @@ class Tokenizer:
     def __init__(self, target_signs_file: str) -> None:
         (
             self._reading2signs_map,
-            self._sign_to_index,
-            self._index_to_sign,
+            self._sign2index,
+            self._index2sign,
         ) = self._load_target_signs(target_signs_file)
-        self.eos_id = self._sign_to_index[self.EOS]
-        self.unk_id = self._sign_to_index[self.UNK]
-        self.spc_id = self._sign_to_index[self.SPC]
-        self.bos_id = self._sign_to_index[self.BOS]
-        self.pad_id = self._sign_to_index[self.PAD]
+        self.eos_id = self._sign2index[self.EOS]
+        self.unk_id = self._sign2index[self.UNK]
+        self.spc_id = self._sign2index[self.SPC]
+        self.bos_id = self._sign2index[self.BOS]
+        self.pad_id = self._sign2index[self.PAD]
 
     def encode(
         self, labels: List[List[str]], device: Optional[torch.device] = None
@@ -63,7 +63,7 @@ class Tokenizer:
         return pad_sequence(batch, batch_first=True, padding_value=self.pad_id)
 
     def __len__(self):
-        return len(self._sign_to_index)
+        return len(self._sign2index)
 
     def decode(self, token_dists: Tensor):
         """Decode a batch of token distributions.
@@ -87,10 +87,10 @@ class Tokenizer:
         return batch_tokens, batch_probs
 
     def _tok2ids(self, tokens: List[str]) -> List[int]:
-        return [self._sign_to_index[token] for token in tokens]
+        return [self._sign2index[token] for token in tokens]
 
     def _ids2tok(self, token_ids: List[int]) -> List[str]:
-        return [self._index_to_sign[token_id] for token_id in token_ids]
+        return [self._index2sign[token_id] for token_id in token_ids]
 
     def _filter(self, probs: Tensor, ids: Tensor) -> Tuple[Tensor, List[int]]:
         """
@@ -112,11 +112,11 @@ class Tokenizer:
         Load target signs json.
         """
         reading2signs_map: Dict[str, List[str]] = {}
-        sign_to_index: Dict[str, int] = {self.EOS: 0, self.UNK: 1, self.SPC: 2}
-        index_to_sign: Dict[int, str] = {}
-        # create inverse dictionary of sign_to_index
-        for key, value in sign_to_index.items():
-            index_to_sign[value] = key
+        sign2index: Dict[str, int] = {self.EOS: 0, self.UNK: 1, self.SPC: 2}
+        index2sign: Dict[int, str] = {}
+        # create inverse dictionary of sign2index
+        for key, value in sign2index.items():
+            index2sign[value] = key
 
         with open(target_signs_file_path) as f:
             loaded = json.load(f)
@@ -124,18 +124,18 @@ class Tokenizer:
         for signs in sorted(loaded):
             sign_indices = []  # list of int sign indices
             for sign in signs.split("."):
-                if sign not in sign_to_index:
-                    idx: int = len(sign_to_index)
-                    sign_to_index[sign] = idx
-                    index_to_sign[idx] = sign
-                sign_indices.append(sign_to_index[sign])
+                if sign not in sign2index:
+                    idx: int = len(sign2index)
+                    sign2index[sign] = idx
+                    index2sign[idx] = sign
+                sign_indices.append(sign2index[sign])
 
             for reading in loaded[signs]["readings"]:
                 reading2signs_map[reading["reading"]] = signs.split(".")
 
         for token in (self.BOS, self.PAD):
-            idx = len(sign_to_index)
-            sign_to_index[token] = idx
-            index_to_sign[idx] = token
+            idx = len(sign2index)
+            sign2index[token] = idx
+            index2sign[idx] = token
 
-        return reading2signs_map, sign_to_index, index_to_sign
+        return reading2signs_map, sign2index, index2sign
