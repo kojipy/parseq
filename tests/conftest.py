@@ -6,10 +6,9 @@ import torchvision.transforms as T
 from strhub.data.dataset import LabelFile, SyntheticCuneiformLineImage
 from strhub.data.tokenizer import Tokenizer
 
-from .__init__ import CHARSET
-
 SAMPLE_LABEL = "tests/assets/000000000.json"
 DATASET_ROOT = "tests/assets/dataset"
+TARGET_SIGNS = "data/target_hittite_cuneiform_signs.json"
 TRANFORM = T.Compose(
     [
         T.RandomApply(
@@ -25,12 +24,12 @@ TRANFORM = T.Compose(
 
 @pytest.fixture
 def tokenizer():
-    return Tokenizer(CHARSET)
+    return Tokenizer(TARGET_SIGNS)
 
 
 @pytest.fixture
-def label_file():
-    return LabelFile(SAMPLE_LABEL)
+def label_file(tokenizer):
+    return LabelFile(SAMPLE_LABEL, tokenizer._reading2signs_map)
 
 
 @pytest.fixture
