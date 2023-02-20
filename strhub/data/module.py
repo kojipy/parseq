@@ -157,7 +157,7 @@ class KeepAspectResize:
         else:
             resize_size = (round(image.width * y_ratio), height)
 
-        resized_image = image.resize(resize_size, resample=Image.BICUBIC)
+        resized_image = image.resize(resize_size, resample=Image.LANCZOS)
 
         return resized_image
 
