@@ -259,15 +259,16 @@ class SyntheticCuneiformValidationLineImage(Dataset):
         image_path = Path(self.images_root_dir) / f"valid_{index + 1:03d}.png"
         return str(image_path)
 
-    def __getitem__(self, index: int) -> Tuple[torch.Tensor, List[str]]:
+    def __getitem__(self, index: int) -> Tuple[torch.Tensor, str]:
         image_path = self._get_image_path(index)
         image = Image.open(image_path).convert("RGB")
         image = self.transform(image)
 
         target = self._text_raw_data[index]
         label = self._reading2signs(target)
+        label_comma_separate = ",".join(label)
 
-        return image, label
+        return image, label_comma_separate
 
     def _reading2signs(self, tokens: List[str]) -> List[str]:
         signs = []
