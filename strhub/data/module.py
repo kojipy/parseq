@@ -14,8 +14,10 @@
 # limitations under the License.
 
 from pathlib import Path
-from typing import Tuple
+from typing import Tuple, Union
 
+import albumentations as A
+import numpy as np
 import pytorch_lightning as pl
 from PIL import Image, ImageOps
 from torch.utils.data import DataLoader
@@ -173,3 +175,34 @@ class Pad:
     def __call__(self, image: Image.Image):
         width, height = self._size
         return ImageOps.pad(image, (width, height), color=(0, 0, 0), centering=(0, 0))
+
+
+class ImageCompression:
+    def __init__(
+        self,
+        quality_lower=1,
+        quality_upper=5,
+        always_apply=False,
+        p=0.5,
+        compression_type=A.ImageCompression.ImageCompressionType.JPEG,
+    ) -> None:
+        self._quality_lower = quality_lower
+        self._quality_upper = quality_upper
+        self._always_apply = always_apply
+        self._p = p
+        self._compression_type = compression_type
+
+        self._transform = A.ImageCompression(
+            quality_lower=self._quality_lower,
+            quality_upper=self._quality_upper,
+            always_apply=self._always_apply,
+            p=self._p,
+            compression_type=self._compression_type,
+        )
+
+    def __call__(self, image: Union[np.ndarray, Image.Image]):
+        if isinstance(image, Image.Image):
+            image = np.array(image)
+
+        transformed = self._transform(image)
+        return transformed["image"]
