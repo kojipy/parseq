@@ -60,13 +60,14 @@ class AbgalDataModule(pl.LightningDataModule):
 
     @staticmethod
     def get_transform(augment: bool, img_width: int, img_height: int):
-        augments = [
+        transforms = [
             KeepAspectResize((img_width, img_height)),
             Pad((img_width, img_height)),
         ]
         if augment:
-            augments.extend(
+            transforms.extend(
                 [
+                    ImageCompression(quality_lower=25, quality_upper=50, p=0.5),
                     T.RandomApply(
                         transforms=[T.GaussianBlur(kernel_size=(3, 5), sigma=(0.1, 1))],
                         p=0.3,
@@ -74,9 +75,9 @@ class AbgalDataModule(pl.LightningDataModule):
                     T.RandomRotation(degrees=(0, 1)),
                 ]
             )
-        augments.extend([T.Resize(img_height), T.Grayscale(), T.ToTensor()])
+        transforms.extend([T.Resize(img_height), T.Grayscale(), T.ToTensor()])
 
-        return T.Compose(augments)
+        return T.Compose(transforms)
 
     @property
     def train_dataset(self):
@@ -180,8 +181,8 @@ class Pad:
 class ImageCompression:
     def __init__(
         self,
-        quality_lower=1,
-        quality_upper=5,
+        quality_lower=30,
+        quality_upper=50,
         always_apply=False,
         p=0.5,
         compression_type=A.ImageCompression.ImageCompressionType.JPEG,
@@ -200,9 +201,10 @@ class ImageCompression:
             compression_type=self._compression_type,
         )
 
-    def __call__(self, image: Union[np.ndarray, Image.Image]):
+    def __call__(self, image: Union[np.ndarray, Image.Image]) -> Image.Image:
         if isinstance(image, Image.Image):
             image = np.array(image)
 
-        transformed = self._transform(image)
-        return transformed["image"]
+        transformed = self._transform(image=image)
+        image = Image.fromarray(transformed["image"])
+        return image
