@@ -78,14 +78,10 @@ def main(config: DictConfig):
         filename="{epoch}-{step}-{val_accuracy:.4f}-{val_NED:.4f}",
     )
     swa = StochasticWeightAveraging(swa_epoch_start=0.75)
-    cwd = (
-        HydraConfig.get().runtime.output_dir
-        if config.ckpt_path is None
-        else str(Path(config.ckpt_path).parents[1].absolute())
-    )
+
     trainer: Trainer = hydra.utils.instantiate(
         config.trainer,
-        logger=TensorBoardLogger(cwd, "", "."),
+        logger=TensorBoardLogger(HydraConfig.get().runtime.output_dir, "", "."),
         strategy=trainer_strategy,
         enable_model_summary=False,
         callbacks=[checkpoint, swa],
