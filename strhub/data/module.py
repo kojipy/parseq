@@ -131,8 +131,8 @@ class AbgalDataModule(pl.LightningDataModule):
         )
 
     def val_dataloader(self):
-        # dataset = self.real_dataset
-        dataset = self.valid_dataset
+        dataset = self.real_dataset
+        # dataset = self.valid_dataset
 
         return DataLoader(
             dataset=dataset,
