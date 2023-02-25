@@ -46,12 +46,10 @@ class LabelFile:
             loaded = json.load(f)
 
         label = []
-        for line in loaded["line"]:
-            for words in line["signs"]:
-                for reading_dict in words:
-                    reading = reading_dict["reading"]
-                    label.append(reading)
-                label.append(self.SPACE)
+        for words in loaded["line"]:
+            for read in words:
+                label.append(read)
+            label.append(self.SPACE)
 
         label = label[:-1]  # remove last space
 
